@@ -135,21 +135,6 @@ function carrefour_viajes_agencias_widgets_init() {
 add_action( 'widgets_init', 'carrefour_viajes_agencias_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
- */
-function carrefour_viajes_agencias_scripts() {
-	wp_enqueue_style( 'carrefour-viajes-agencias-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'carrefour-viajes-agencias-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'carrefour-viajes-agencias-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'carrefour_viajes_agencias_scripts' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -168,6 +153,16 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Post Types.
+ */
+require get_template_directory() . '/inc/cpt.php';
+
+/**
+ * Styles and JS.
+ */
+require get_template_directory() . '/inc/enqueue.php';
 
 /**
  * Load Jetpack compatibility file.
