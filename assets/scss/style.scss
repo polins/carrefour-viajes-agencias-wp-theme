@@ -10,6 +10,252 @@ body{
 }
 
 @font-face {
+    font-family: "carrefour-icon";
+    src: url("../fonts/carrefour-icon.eot?cgfwea");
+    src: url("../fonts/carrefour-icon.eot?cgfwea#iefix") format("embedded-opentype"), url("../fonts/carrefour-icon.ttf?cgfwea") format("truetype"), url("../fonts/carrefour-icon.woff?cgfwea") format("woff"), url("../fonts/carrefour-icon.svg?cgfwea#carrefour-icon") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: "carrefour-icon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-passport:before {
+    content: ""
+}
+
+.icon-around:before {
+    content: ""
+}
+
+.icon-clock:before {
+    content: ""
+}
+
+.icon-card-pass:before {
+    content: ""
+}
+
+.icon-check:before {
+    content: ""
+}
+
+.icon-direction:before {
+    content: ""
+}
+
+.icon-phone:before {
+    content: ""
+}
+
+.icon-close:before {
+    content: ""
+}
+
+.icon-search:before {
+    content: ""
+}
+
+.icon-ubication:before {
+    content: ""
+}
+
+.icon-google:before {
+    content: ""
+}
+
+.icon-arrow-left:before {
+    content: ""
+}
+
+.icon-arrow-right:before {
+    content: ""
+}
+
+.icon-alert:before {
+    content: ""
+}
+
+.icon-calendar:before {
+    content: ""
+}
+
+.icon-arrival:before {
+    content: ""
+}
+
+.icon-departure:before {
+    content: ""
+}
+
+.icon-pass:before {
+    content: ""
+}
+
+.icon-tourist:before {
+    content: ""
+}
+
+.icon-instagram:before {
+    content: ""
+}
+
+.icon-linkedin:before {
+    content: ""
+}
+
+.icon-plane:before {
+    content: ""
+}
+
+.icon-pinterest:before {
+    content: ""
+}
+
+.icon-top:before {
+    content: ""
+}
+
+.icon-down:before {
+    content: ""
+}
+
+.icon-respect:before {
+    content: ""
+}
+
+.icon-star:before {
+    content: ""
+}
+
+.icon-twitter:before {
+    content: ""
+}
+
+.icon-youtube:before {
+    content: ""
+}
+
+.icon-facebook:before {
+    content: ""
+}
+
+.icon-more:before {
+    content: ""
+}
+
+.icon-less:before {
+    content: ""
+}
+
+.icon-tooltip:before {
+    content: ""
+}
+
+.icon-menu:before {
+    content: ""
+}
+
+.icon-edit:before {
+    content: ""
+}
+
+.icon-train:before {
+    content: ""
+}
+
+.icon-suitcase:before {
+    content: ""
+}
+
+.icon-city:before {
+    content: ""
+}
+
+.icon-menu:before {
+    content: ""
+}
+
+.icon-site-paid:before {
+    content: ""
+}
+
+.icon-site-extra:before {
+    content: ""
+}
+
+.icon-site-free:before {
+    content: ""
+}
+
+.icon-toilet:before {
+    content: ""
+}
+
+.icon-exit-left:before {
+    content: ""
+}
+
+.icon-exit-right:before {
+    content: ""
+}
+
+.icon-logo-viajes-short:before {
+    content: ""
+}
+
+.icon-email:before {
+    content: ""
+}
+
+.icon-warranty:before {
+    content: ""
+}
+
+.icon-close-bordered:before {
+    content: ""
+}
+
+.icon-thumb-up-emphasized:before {
+    content: ""
+}
+
+.icon-thumb-up:before {
+    content: ""
+}
+
+.icon-card-credit:before {
+    content: ""
+}
+
+.icon-luggage-not-included:before {
+    content: ""
+}
+
+.icon-step-details:before {
+    content: ""
+}
+
+.icon-step-data:before {
+    content: ""
+}
+
+.icon-step-payment:before {
+    content: ""
+}
+
+
+@font-face {
     font-family: 'rrss';
     src: url(".../fonts/rrss.eot?xoyb82");
     src: url("../fonts/rrss.eot?xoyb82#iefix") format("embedded-opentype"),url("../fonts/rrss.ttf?xoyb82") format("truetype"),url("../fonts/rrss.woff?xoyb82") format("woff"),url("../fonts/rrss.svg?xoyb82#rrss") format("svg");
@@ -1285,4 +1531,74 @@ footer{
 		}
 	}
 }
+header{
+    flex-direction: row;
+    .right-header{
+        max-width: 70%;
+    }
+    .preheader{
+        margin-bottom: 30px;
+        .header-elements{
+            li{
+                a:after{
+                    content:none;
+                }
+            }
+        }
+    }
+    @media (max-width: 905px){
+        .main-menu{
+            display: none;
+        }
+    }
+    @media (max-width: 550px){
+        .preheader{
+            display: none;
+        }
+        .logo-container{
+            width: 100%;
+            img{
+                max-width: 200px;
+                margin: 0 auto !important
+            }
+        }
+    }
+    .header-elements{
+        float: right;
+        flex-wrap: wrap;
+         li{
+            margin-left: 20px;
+            margin-bottom: 10px;
+            float:right;
+        }
+         li{
+            a{
+                text-transform: uppercase;
+                font-size: .685rem;
+                font-weight: 400;
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    margin: auto;
+                    transition: all .2s ease-out;
+                    @apply bg-blue-dark
+                }
+                &:hover{
+                    &:after{
+                        transition: all .2s ease-out;
+                        width:100%;
+                    }
+                    @apply text-blue
+                }
+                @apply text-blue-dark
+            }
+        }
+    }
+}
+
 /* purgecss end ignore */

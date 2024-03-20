@@ -320,17 +320,11 @@ img {
 .mb-0{
   margin-bottom: 0px !important;
 }
-.mb-2{
-  margin-bottom: 0.5rem !important;
-}
 .mb-3{
   margin-bottom: 0.75rem !important;
 }
-.ml-0{
-  margin-left: 0px !important;
-}
-.mr-1{
-  margin-right: 0.25rem !important;
+.mb-5{
+  margin-bottom: 1.25rem !important;
 }
 .mt-0{
   margin-top: 0px !important;
@@ -341,14 +335,8 @@ img {
 .block{
   display: block !important;
 }
-.inline-block{
-  display: inline-block !important;
-}
 .flex{
   display: flex !important;
-}
-.h-2{
-  height: 0.5rem !important;
 }
 .w-full{
   width: 100% !important;
@@ -421,14 +409,14 @@ img {
 .pb-0{
   padding-bottom: 0px !important;
 }
-.pb-2{
-  padding-bottom: 0.5rem !important;
-}
 .pb-3{
   padding-bottom: 0.75rem !important;
 }
 .pb-4{
   padding-bottom: 1rem !important;
+}
+.pb-5{
+  padding-bottom: 1.25rem !important;
 }
 .pt-0{
   padding-top: 0px !important;
@@ -441,9 +429,6 @@ img {
 }
 .pt-4{
   padding-top: 1rem !important;
-}
-.text-left{
-  text-align: left !important;
 }
 .text-center{
   text-align: center !important;
@@ -465,35 +450,266 @@ img {
 .uppercase{
   text-transform: uppercase !important;
 }
-.normal-case{
-  text-transform: none !important;
-}
-.not-italic{
-  font-style: normal !important;
-}
 .leading-3{
   line-height: .75rem !important;
 }
 .leading-4{
   line-height: 1rem !important;
 }
-.leading-none{
-  line-height: 1 !important;
+.text-blue-dark{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 80 152 / var(--tw-text-opacity)) !important;
 }
 .text-white{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
-.text-blue-dark{
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 80 152 / var(--tw-text-opacity)) !important;
-}
-.content-none{
-  --tw-content: none !important;
-  content: var(--tw-content) !important;
-}
 body{
   font-weight: 300;
+}
+
+@font-face {
+  font-family: "carrefour-icon";
+  src: url("../fonts/carrefour-icon.eot?cgfwea");
+  src: url("../fonts/carrefour-icon.eot?cgfwea#iefix") format("embedded-opentype"), url("../fonts/carrefour-icon.ttf?cgfwea") format("truetype"), url("../fonts/carrefour-icon.woff?cgfwea") format("woff"), url("../fonts/carrefour-icon.svg?cgfwea#carrefour-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  font-family: "carrefour-icon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-passport:before {
+  content: "\e900";
+}
+
+.icon-around:before {
+  content: "\e901";
+}
+
+.icon-clock:before {
+  content: "\e902";
+}
+
+.icon-card-pass:before {
+  content: "\e903";
+}
+
+.icon-check:before {
+  content: "\e904";
+}
+
+.icon-direction:before {
+  content: "\e905";
+}
+
+.icon-phone:before {
+  content: "\e906";
+}
+
+.icon-close:before {
+  content: "\e907";
+}
+
+.icon-search:before {
+  content: "\e908";
+}
+
+.icon-ubication:before {
+  content: "\e909";
+}
+
+.icon-google:before {
+  content: "\e90a";
+}
+
+.icon-arrow-left:before {
+  content: "\e90b";
+}
+
+.icon-arrow-right:before {
+  content: "\e90c";
+}
+
+.icon-alert:before {
+  content: "\e90d";
+}
+
+.icon-calendar:before {
+  content: "\e90e";
+}
+
+.icon-arrival:before {
+  content: "\e90f";
+}
+
+.icon-departure:before {
+  content: "\e910";
+}
+
+.icon-pass:before {
+  content: "\e911";
+}
+
+.icon-tourist:before {
+  content: "\e912";
+}
+
+.icon-instagram:before {
+  content: "\e913";
+}
+
+.icon-linkedin:before {
+  content: "\e914";
+}
+
+.icon-plane:before {
+  content: "\e915";
+}
+
+.icon-pinterest:before {
+  content: "\e916";
+}
+
+.icon-top:before {
+  content: "\e925";
+}
+
+.icon-down:before {
+  content: "\e918";
+}
+
+.icon-respect:before {
+  content: "\e919";
+}
+
+.icon-star:before {
+  content: "\e91a";
+}
+
+.icon-twitter:before {
+  content: "\e91b";
+}
+
+.icon-youtube:before {
+  content: "\e91c";
+}
+
+.icon-facebook:before {
+  content: "\e91d";
+}
+
+.icon-more:before {
+  content: "\e917";
+}
+
+.icon-less:before {
+  content: "\e91e";
+}
+
+.icon-tooltip:before {
+  content: "\e922";
+}
+
+.icon-menu:before {
+  content: "\e923";
+}
+
+.icon-edit:before {
+  content: "\e91f";
+}
+
+.icon-train:before {
+  content: "\e920";
+}
+
+.icon-suitcase:before {
+  content: "\e921";
+}
+
+.icon-city:before {
+  content: "\e924";
+}
+
+.icon-menu:before {
+  content: "\e926";
+}
+
+.icon-site-paid:before {
+  content: "\e927";
+}
+
+.icon-site-extra:before {
+  content: "\e928";
+}
+
+.icon-site-free:before {
+  content: "\e929";
+}
+
+.icon-toilet:before {
+  content: "\e92a";
+}
+
+.icon-exit-left:before {
+  content: "\e92b";
+}
+
+.icon-exit-right:before {
+  content: "\e92c";
+}
+
+.icon-logo-viajes-short:before {
+  content: "\e92d";
+}
+
+.icon-email:before {
+  content: "\e92e";
+}
+
+.icon-warranty:before {
+  content: "\e92f";
+}
+
+.icon-close-bordered:before {
+  content: "\e930";
+}
+
+.icon-thumb-up-emphasized:before {
+  content: "\e931";
+}
+
+.icon-thumb-up:before {
+  content: "\e932";
+}
+
+.icon-card-credit:before {
+  content: "\e933";
+}
+
+.icon-luggage-not-included:before {
+  content: "\e934";
+}
+
+.icon-step-details:before {
+  content: "\e935";
+}
+
+.icon-step-data:before {
+  content: "\e936";
+}
+
+.icon-step-payment:before {
+  content: "\e937";
 }
 
 @font-face {
@@ -1759,12 +1975,75 @@ footer .legal-block li {
   }
 }
 
-.hover\:opacity-50:hover{
-  opacity: 0.5 !important;
+header {
+  flex-direction: row;
+}
+header .right-header {
+  max-width: 70%;
+}
+header .preheader {
+  margin-bottom: 30px;
+}
+header .preheader .header-elements li a:after {
+  content: none;
+}
+@media (max-width: 905px) {
+  header .main-menu {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  header .preheader {
+    display: none;
+  }
+  header .logo-container {
+    width: 100%;
+  }
+  header .logo-container img {
+    max-width: 200px;
+    margin: 0 auto !important;
+  }
+}
+header .header-elements {
+  float: right;
+  flex-wrap: wrap;
+}
+header .header-elements li {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  float: right;
+}
+header .header-elements li a {
+  text-transform: uppercase;
+  font-size: 0.685rem;
+  font-weight: 400;
+  position: relative;
+  --tw-text-opacity: 1;
+  color: rgb(0 80 152 / var(--tw-text-opacity));
+}
+header .header-elements li a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  margin: auto;
+  transition: all 0.2s ease-out;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 80 152 / var(--tw-bg-opacity));
+}
+header .header-elements li a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 167 223 / var(--tw-text-opacity));
+}
+header .header-elements li a:hover:after {
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
 
-.hover\:opacity-80:hover{
-  opacity: 0.8 !important;
+.hover\:opacity-50:hover{
+  opacity: 0.5 !important;
 }
 
 .focus\:border-0:focus{
@@ -1796,9 +2075,6 @@ footer .legal-block li {
 }
 
 @media (min-width: 768px){
-  .md\:block{
-    display: block !important;
-  }
   .md\:flex{
     display: flex !important;
   }
@@ -1837,54 +2113,18 @@ footer .legal-block li {
   .lg\:relative{
     position: relative !important;
   }
-  .lg\:left-0{
-    left: 0px !important;
-  }
-  .lg\:top-0{
-    top: 0px !important;
-  }
   .lg\:-order-1{
     order: -1 !important;
-  }
-  .lg\:mb-0{
-    margin-bottom: 0px !important;
   }
   .lg\:inline-block{
     display: inline-block !important;
   }
-  .lg\:flex{
-    display: flex !important;
-  }
-  .lg\:h-auto{
-    height: auto !important;
-  }
-  .lg\:w-3\/4{
-    width: 75% !important;
-  }
   .lg\:w-full{
     width: 100% !important;
-  }
-  .lg\:items-center{
-    align-items: center !important;
-  }
-  .lg\:justify-end{
-    justify-content: flex-end !important;
-  }
-  .lg\:border-b-0{
-    border-bottom-width: 0px !important;
-  }
-  .lg\:p-0{
-    padding: 0px !important;
   }
   .lg\:px-5{
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
-  }
-  .lg\:pb-0{
-    padding-bottom: 0px !important;
-  }
-  .lg\:pb-1{
-    padding-bottom: 0.25rem !important;
   }
   .lg\:pl-3{
     padding-left: 0.75rem !important;
@@ -1895,22 +2135,12 @@ footer .legal-block li {
   .lg\:text-left{
     text-align: left !important;
   }
-  .lg\:text-xs{
-    font-size: 0.75rem !important;
-    line-height: 1rem !important;
-  }
-  .lg\:uppercase{
-    text-transform: uppercase !important;
-  }
 }
 
 @media (min-width: 1280px){
   .xl\:px-12{
     padding-left: 3rem !important;
     padding-right: 3rem !important;
-  }
-  .xl\:pb-1{
-    padding-bottom: 0.25rem !important;
   }
   .xl\:pt-8{
     padding-top: 2rem !important;
