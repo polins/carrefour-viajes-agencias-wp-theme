@@ -95,33 +95,13 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 2. Remove the margin in Firefox and Safari.
 3. Remove default padding in all browsers.
 */
-button {
-  font-family: inherit; /* 1 */
-  font-feature-settings: inherit; /* 1 */
-  font-variation-settings: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  font-weight: inherit; /* 1 */
-  line-height: inherit; /* 1 */
-  color: inherit; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 3 */
-}
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
-button {
-  text-transform: none;
-}
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Remove default button styles.
 */
-button,
-[type='button'] {
-  -webkit-appearance: button; /* 1 */
-  background-color: transparent; /* 2 */
-  background-image: none; /* 2 */
-}
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
@@ -192,9 +172,6 @@ Prevent resizing textareas horizontally by default.
 /*
 Set the default cursor for buttons.
 */
-button {
-  cursor: pointer;
-}
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
@@ -318,6 +295,9 @@ img {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.static{
+  position: static !important;
+}
 .m-0{
   margin: 0px !important;
 }
@@ -340,8 +320,17 @@ img {
 .mb-0{
   margin-bottom: 0px !important;
 }
+.mb-2{
+  margin-bottom: 0.5rem !important;
+}
 .mb-3{
   margin-bottom: 0.75rem !important;
+}
+.ml-0{
+  margin-left: 0px !important;
+}
+.mr-1{
+  margin-right: 0.25rem !important;
 }
 .mt-0{
   margin-top: 0px !important;
@@ -352,8 +341,14 @@ img {
 .block{
   display: block !important;
 }
+.inline-block{
+  display: inline-block !important;
+}
 .flex{
   display: flex !important;
+}
+.h-2{
+  height: 0.5rem !important;
 }
 .w-full{
   width: 100% !important;
@@ -367,17 +362,36 @@ img {
 .flex-col{
   flex-direction: column !important;
 }
+.flex-wrap{
+  flex-wrap: wrap !important;
+}
 .items-center{
   align-items: center !important;
 }
 .justify-center{
   justify-content: center !important;
 }
+.justify-between{
+  justify-content: space-between !important;
+}
 .overflow-hidden{
   overflow: hidden !important;
 }
 .border-0{
   border-width: 0px !important;
+}
+.border-x-0{
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
+}
+.border-b{
+  border-bottom-width: 1px !important;
+}
+.border-t-0{
+  border-top-width: 0px !important;
+}
+.border-solid{
+  border-style: solid !important;
 }
 .bg-white{
   --tw-bg-opacity: 1 !important;
@@ -396,8 +410,19 @@ img {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+.px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.py-2{
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
 .pb-0{
   padding-bottom: 0px !important;
+}
+.pb-2{
+  padding-bottom: 0.5rem !important;
 }
 .pb-3{
   padding-bottom: 0.75rem !important;
@@ -408,11 +433,17 @@ img {
 .pt-0{
   padding-top: 0px !important;
 }
+.pt-1{
+  padding-top: 0.25rem !important;
+}
 .pt-3{
   padding-top: 0.75rem !important;
 }
 .pt-4{
   padding-top: 1rem !important;
+}
+.text-left{
+  text-align: left !important;
 }
 .text-center{
   text-align: center !important;
@@ -434,15 +465,32 @@ img {
 .uppercase{
   text-transform: uppercase !important;
 }
+.normal-case{
+  text-transform: none !important;
+}
+.not-italic{
+  font-style: normal !important;
+}
 .leading-3{
   line-height: .75rem !important;
 }
 .leading-4{
   line-height: 1rem !important;
 }
+.leading-none{
+  line-height: 1 !important;
+}
 .text-white{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.text-blue-dark{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 80 152 / var(--tw-text-opacity)) !important;
+}
+.content-none{
+  --tw-content: none !important;
+  content: var(--tw-content) !important;
 }
 body{
   font-weight: 300;
@@ -1715,6 +1763,10 @@ footer .legal-block li {
   opacity: 0.5 !important;
 }
 
+.hover\:opacity-80:hover{
+  opacity: 0.8 !important;
+}
+
 .focus\:border-0:focus{
   border-width: 0px !important;
 }
@@ -1744,6 +1796,9 @@ footer .legal-block li {
 }
 
 @media (min-width: 768px){
+  .md\:block{
+    display: block !important;
+  }
   .md\:flex{
     display: flex !important;
   }
@@ -1775,5 +1830,89 @@ footer .legal-block li {
   .md\:text-xs{
     font-size: 0.75rem !important;
     line-height: 1rem !important;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:relative{
+    position: relative !important;
+  }
+  .lg\:left-0{
+    left: 0px !important;
+  }
+  .lg\:top-0{
+    top: 0px !important;
+  }
+  .lg\:-order-1{
+    order: -1 !important;
+  }
+  .lg\:mb-0{
+    margin-bottom: 0px !important;
+  }
+  .lg\:inline-block{
+    display: inline-block !important;
+  }
+  .lg\:flex{
+    display: flex !important;
+  }
+  .lg\:h-auto{
+    height: auto !important;
+  }
+  .lg\:w-3\/4{
+    width: 75% !important;
+  }
+  .lg\:w-full{
+    width: 100% !important;
+  }
+  .lg\:items-center{
+    align-items: center !important;
+  }
+  .lg\:justify-end{
+    justify-content: flex-end !important;
+  }
+  .lg\:border-b-0{
+    border-bottom-width: 0px !important;
+  }
+  .lg\:p-0{
+    padding: 0px !important;
+  }
+  .lg\:px-5{
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  .lg\:pb-0{
+    padding-bottom: 0px !important;
+  }
+  .lg\:pb-1{
+    padding-bottom: 0.25rem !important;
+  }
+  .lg\:pl-3{
+    padding-left: 0.75rem !important;
+  }
+  .lg\:pt-8{
+    padding-top: 2rem !important;
+  }
+  .lg\:text-left{
+    text-align: left !important;
+  }
+  .lg\:text-xs{
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
+  .lg\:uppercase{
+    text-transform: uppercase !important;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:px-12{
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  .xl\:pb-1{
+    padding-bottom: 0.25rem !important;
+  }
+  .xl\:pt-8{
+    padding-top: 2rem !important;
   }
 }
