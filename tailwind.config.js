@@ -1,6 +1,7 @@
 module.exports = {
   prefix: '',
   important: true,
+  content: ['*.php'],
   theme: {
     container:{
       screens:{

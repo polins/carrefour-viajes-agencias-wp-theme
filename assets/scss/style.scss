@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,1283 @@
 
 /* purgecss start ignore */
 body{
-	@apply bg-blue
+	@apply font-light
+}
+
+@font-face {
+    font-family: 'rrss';
+    src: url(".../fonts/rrss.eot?xoyb82");
+    src: url("../fonts/rrss.eot?xoyb82#iefix") format("embedded-opentype"),url("../fonts/rrss.ttf?xoyb82") format("truetype"),url("../fonts/rrss.woff?xoyb82") format("woff"),url("../fonts/rrss.svg?xoyb82#rrss") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^='vc-rrss-'],[class*=' vc-rrss-'] {
+    font-family: 'rrss' !important;
+    font-size: xx-large;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    padding-right: 5px;
+    padding-left: 20px;
+    text-transform: none;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility
+}
+
+[class^='vc-rrss-'].vc-rrss-small,[class*=' vc-rrss-'].vc-rrss-small {
+    font-size: 20px
+}
+
+[class^='vc-rrss-'].vc-rrss-medium,[class*=' vc-rrss-'].vc-rrss-medium {
+    font-size: 24px
+}
+
+[class^='vc-rrss-'].vc-rrss-big,[class*=' vc-rrss-'].vc-rrss-big {
+    font-size: 30px
+}
+
+[class^='vc-rrss-'].vc-rrss-large,[class*=' vc-rrss-'].vc-rrss-large {
+    font-size: 30px
+}
+
+.vc-rrss-tiktok-button:before {
+    content: "\0030"
+}
+
+.vc-rrss-tiktok:before {
+    content: "\0030"
+}
+
+.vc-rrss-facebook:before {
+    content: "\0031"
+}
+
+.vc-rrss-linkedin:before {
+    content: "\0032"
+}
+
+.vc-rrss-instagram:before {
+    content: "\0033"
+}
+
+.vc-rrss-twitter:before {
+    content: "\0034"
+}
+
+.vc-rrss-youtube:before {
+    content: "\0035"
+}
+
+
+@font-face {
+    font-family: 'viajescarrefour';
+    src: url("../fonts/viajescarrefour.eot?xoyb82");
+    src: url("../fonts/viajescarrefour.eot?xoyb82#iefix") format("embedded-opentype"), url("../fonts/viajescarrefour.ttf?xoyb82") format("truetype"), url("../fonts/viajescarrefour.woff?xoyb82") format("woff"), url("../fonts/viajescarrefour.svg?xoyb82#viajescarrefour") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^='vc-icon-'],
+[class*=' vc-icon-'] {
+    font-family: 'viajescarrefour' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility
+}
+
+[class^='vc-icon-'].vc-icon-small,
+[class*=' vc-icon-'].vc-icon-small {
+    font-size: 20px
+}
+
+[class^='vc-icon-'].vc-icon-medium,
+[class*=' vc-icon-'].vc-icon-medium {
+    font-size: 24px
+}
+
+[class^='vc-icon-'].vc-icon-big,
+[class*=' vc-icon-'].vc-icon-big {
+    font-size: 30px
+}
+
+[class^='vc-icon-'].vc-icon-large,
+[class*=' vc-icon-'].vc-icon-large {
+    font-size: 30px
+}
+
+.vc-icon-accesible:before {
+    content: ""
+}
+
+.vc-icon-accommodation:before {
+    content: ""
+}
+
+.vc-icon-add-pin:before {
+    content: ""
+}
+
+.vc-icon-add-star:before {
+    content: ""
+}
+
+.vc-icon-adigital:before {
+    content: ""
+}
+
+.vc-icon-agency:before {
+    content: ""
+}
+
+.vc-icon-air-conditioner:before {
+    content: ""
+}
+
+.vc-icon-all-included:before {
+    content: ""
+}
+
+.vc-icon-app:before {
+    content: ""
+}
+
+.vc-icon-arrow-down:before {
+    content: ""
+}
+
+.vc-icon-arrow-first:before {
+    content: ""
+}
+
+.vc-icon-arrow-last:before {
+    content: ""
+}
+
+.vc-icon-arrow-left:before {
+    content: ""
+}
+
+.vc-icon-arrow-right:before {
+    content: ""
+}
+
+.vc-icon-arrow-up:before {
+    content: ""
+}
+
+.vc-icon-attached:before {
+    content: ""
+}
+
+.vc-icon-baby:before {
+    content: ""
+}
+
+.vc-icon-back:before {
+    content: ""
+}
+
+.vc-icon-basket:before {
+    content: ""
+}
+
+.vc-icon-bell:before {
+    content: ""
+}
+
+.vc-icon-best-warranty:before {
+    content: ""
+}
+
+.vc-icon-blogger-button:before {
+    content: ""
+}
+
+.vc-icon-boat:before {
+    content: ""
+}
+
+.vc-icon-booking-card:before {
+    content: ""
+}
+
+.vc-icon-booking:before {
+    content: ""
+}
+
+.vc-icon-breakfast:before {
+    content: ""
+}
+
+.vc-icon-business:before {
+    content: ""
+}
+
+.vc-icon-calendar:before {
+    content: ""
+}
+
+.vc-icon-canceled:before {
+    content: ""
+}
+
+.vc-icon-cancelled-negative:before {
+    content: ""
+}
+
+.vc-icon-car:before {
+    content: ""
+}
+
+.vc-icon-carrefour-mini:before {
+    content: ""
+}
+
+.vc-icon-carrefour:before {
+    content: ""
+}
+
+.vc-icon-cdti-logo:before {
+    content: ""
+}
+
+.vc-icon-checkbox-clicked-button:before {
+    content: ""
+}
+
+.vc-icon-checkbox-clicked:before {
+    content: ""
+}
+
+.vc-icon-checkbox:before {
+    content: ""
+}
+
+.vc-icon-child:before {
+    content: ""
+}
+
+.vc-icon-clip:before {
+    content: ""
+}
+
+.vc-icon-city:before {
+    content: ""
+}
+
+.vc-icon-close-button:before {
+    content: ""
+}
+
+.vc-icon-close-thin:before {
+    content: ""
+}
+
+.vc-icon-close:before {
+    content: ""
+}
+
+.vc-icon-commission:before {
+    content: ""
+}
+
+.vc-icon-comunication:before {
+    content: ""
+}
+
+.vc-icon-conditions:before {
+    content: ""
+}
+
+.vc-icon-confianzaonline:before {
+    content: ""
+}
+
+.vc-icon-contact-header:before {
+    content: ""
+}
+
+.vc-icon-contract:before {
+    content: ""
+}
+
+.vc-icon-credit:before {
+    content: ""
+}
+
+.vc-icon-t-credit:before {
+    content: ""
+}
+
+.vc-icon-customer-care:before {
+    content: ""
+}
+
+.vc-icon-description:before {
+    content: ""
+}
+
+.vc-icon-detail:before {
+    content: ""
+}
+
+.vc-icon-discount:before {
+    content: ""
+}
+
+.vc-icon-documents:before {
+    content: ""
+}
+
+.vc-icon-double:before {
+    content: ""
+}
+
+.vc-icon-down:before {
+    content: ""
+}
+
+.vc-icon-download:before {
+    content: ""
+}
+
+.vc-icon-drag-document:before {
+    content: ""
+}
+
+.vc-icon-dropdown:before {
+    content: ""
+}
+
+.vc-icon-early-booking:before {
+    content: ""
+}
+
+.vc-icon-eco-certificate:before {
+    content: ""
+}
+
+.vc-icon-edit-list:before {
+    content: ""
+}
+
+.vc-icon-edit:before {
+    content: ""
+}
+
+.vc-icon-email-response1:before {
+    content: ""
+}
+
+.vc-icon-email-response2:before {
+    content: ""
+}
+
+.vc-icon-email-response3:before {
+    content: ""
+}
+
+.vc-icon-email:before {
+    content: ""
+}
+
+.vc-icon-entry:before {
+    content: ""
+}
+
+.vc-icon-error-state:before {
+    content: ""
+}
+
+.vc-icon-european-commission:before {
+    content: ""
+}
+
+.vc-icon-exchange:before {
+    content: ""
+}
+
+.vc-icon-exclamation:before {
+    content: ""
+}
+
+.vc-icon-exit:before {
+    content: ""
+}
+
+.vc-icon-eye:before {
+    content: ""
+}
+
+.vc-icon-facebook:before {
+    content: ""
+}
+
+.vc-icon-facilities:before {
+    content: ""
+}
+
+.vc-icon-favourite-document:before {
+    content: ""
+}
+
+.vc-icon-fax:before {
+    content: ""
+}
+
+.vc-icon-filter:before {
+    content: ""
+}
+
+.vc-icon-flicker-button:before {
+    content: ""
+}
+
+.vc-icon-foursquare-button:before {
+    content: ""
+}
+
+.vc-icon-full-board:before {
+    content: ""
+}
+
+.vc-icon-garbage:before {
+    content: ""
+}
+
+.vc-icon-googleplus:before {
+    content: ""
+}
+
+.vc-icon-grid:before {
+    content: ""
+}
+
+.vc-icon-group:before {
+    content: ""
+}
+
+.vc-icon-half-board1:before {
+    content: ""
+}
+
+.vc-icon-half-board2:before {
+    content: ""
+}
+
+.vc-icon-hide:before {
+    content: ""
+}
+
+.vc-icon-home:before {
+    content: ""
+}
+
+.vc-icon-hotel:before {
+    content: ""
+}
+
+.vc-icon-info:before {
+    content: ""
+}
+
+.vc-icon-information:before {
+    content: ""
+}
+
+.vc-icon-instagram-button:before {
+    content: ""
+}
+
+.vc-icon-instagram:before {
+    content: ""
+}
+
+.vc-icon-internet:before {
+    content: ""
+}
+
+.vc-icon-invoice:before {
+    content: ""
+}
+
+.vc-icon-like-hand:before {
+    content: ""
+}
+
+.vc-icon-like:before {
+    content: ""
+}
+
+.vc-icon-link:before {
+    content: ""
+}
+
+.vc-icon-linkedin:before {
+    content: ""
+}
+
+.vc-icon-list-map:before {
+    content: ""
+}
+
+.vc-icon-list:before {
+    content: ""
+}
+
+.vc-icon-loading2:before {
+    content: ""
+}
+
+.vc-icon-location-header:before {
+    content: ""
+}
+
+.vc-icon-location:before {
+    content: ""
+}
+
+.vc-icon-logotipo-viajescarrefour-vertical:before {
+    content: ""
+}
+
+.vc-icon-logout:before {
+    content: ""
+}
+
+.vc-icon-low:before {
+    content: ""
+}
+
+.vc-icon-mail-header:before {
+    content: ""
+}
+
+.vc-icon-mail:before {
+    content: ""
+}
+
+.vc-icon-map:before {
+    content: ""
+}
+
+.vc-icon-mastercard:before {
+    content: ""
+}
+
+.vc-icon-maximize-button:before {
+    content: ""
+}
+
+.vc-icon-meneame-button:before {
+    content: ""
+}
+
+.vc-icon-menu:before {
+    content: ""
+}
+
+.vc-icon-messenger:before {
+    content: ""
+}
+
+.vc-icon-minimize-button:before {
+    content: ""
+}
+
+.vc-icon-minus:before {
+    content: ""
+}
+
+.vc-icon-money:before {
+    content: ""
+}
+
+.vc-icon-more:before {
+    content: ""
+}
+
+.vc-icon-move-document:before {
+    content: ""
+}
+
+.vc-icon-must-know:before {
+    content: ""
+}
+
+.vc-icon-newsletter:before {
+    content: ""
+}
+
+.vc-icon-next:before {
+    content: ""
+}
+
+.vc-icon-no-date:before {
+    content: ""
+}
+
+.vc-icon-no-filter:before {
+    content: ""
+}
+
+.vc-icon-no-rated:before {
+    content: ""
+}
+
+.vc-icon-no-refund:before {
+    content: ""
+}
+
+.vc-icon-no-warranty:before {
+    content: ""
+}
+
+.vc-icon-note:before {
+    content: ""
+}
+
+.vc-icon-notification:before {
+    content: ""
+}
+
+.vc-icon-offer:before {
+    content: ""
+}
+
+.vc-icon-ok:before {
+    content: ""
+}
+
+.vc-icon-pacifier:before {
+    content: ""
+}
+
+.vc-icon-order:before {
+    content: ""
+}
+
+.vc-icon-partner:before {
+    content: ""
+}
+
+.vc-icon-pass-card:before {
+    content: ""
+}
+
+.vc-icon-pass:before {
+    content: ""
+}
+
+.vc-icon-password:before {
+    content: ""
+}
+
+.vc-icon-payment:before {
+    content: ""
+}
+
+.vc-icon-pdf:before {
+    content: ""
+}
+
+.vc-icon-pdf-all:before {
+    content: ""
+}
+
+.vc-icon-pdf-icon:before {
+    content: ""
+}
+
+.vc-icon-pencil:before {
+    content: ""
+}
+
+.vc-icon-pets:before {
+    content: ""
+}
+
+.vc-icon-phone-header:before {
+    content: ""
+}
+
+.vc-icon-phone:before {
+    content: ""
+}
+
+.vc-icon-pin-location:before {
+    content: ""
+}
+
+.vc-icon-pin:before {
+    content: ""
+}
+
+.vc-icon-pinterest-button:before {
+    content: ""
+}
+
+.vc-icon-pinterest:before {
+    content: ""
+}
+
+.vc-icon-place:before {
+    content: ""
+}
+
+.vc-icon-plane-hotel:before {
+    content: ""
+}
+
+.vc-icon-plane:before {
+    content: ""
+}
+
+.vc-icon-plane-lleego:before {
+    content: "";
+    font-size: 30px;
+    position: absolute;
+    top: 5px;
+    left: 3px
+}
+
+.vc-icon-plus:before {
+    content: ""
+}
+
+.vc-icon-pointer:before {
+    content: ""
+}
+
+.vc-icon-portfolio-verify:before {
+    content: ""
+}
+
+.vc-icon-portfolio:before {
+    content: ""
+}
+
+.vc-icon-prebooking-state:before {
+    content: ""
+}
+
+.vc-icon-previous:before {
+    content: ""
+}
+
+.vc-icon-print:before {
+    content: ""
+}
+
+.vc-icon-question:before {
+    content: ""
+}
+
+.vc-icon-rated-00:before {
+    content: ""
+}
+
+.vc-icon-rated-05:before {
+    content: ""
+}
+
+.vc-icon-rated-10:before {
+    content: ""
+}
+
+.vc-icon-rated-15:before {
+    content: ""
+}
+
+.vc-icon-rated-20:before {
+    content: ""
+}
+
+.vc-icon-rated-25:before {
+    content: ""
+}
+
+.vc-icon-rated-30:before {
+    content: ""
+}
+
+.vc-icon-rated-35:before {
+    content: ""
+}
+
+.vc-icon-rated-40:before {
+    content: ""
+}
+
+.vc-icon-rated-45:before {
+    content: ""
+}
+
+.vc-icon-rated-50:before {
+    content: ""
+}
+
+.vc-icon-rated-empty:before {
+    content: ""
+}
+
+.vc-icon-rated-full:before {
+    content: ""
+}
+
+.vc-icon-rated-medium:before {
+    content: ""
+}
+
+.vc-icon-rated:before {
+    content: ""
+}
+
+.vc-icon-refund:before {
+    content: ""
+}
+
+.vc-icon-restaurant:before {
+    content: ""
+}
+
+.vc-icon-resume:before {
+    content: ""
+}
+
+.vc-icon-room:before {
+    content: ""
+}
+
+.vc-icon-round-checkbox-button:before {
+    content: ""
+}
+
+.vc-icon-sale:before {
+    content: ""
+}
+
+.vc-icon-save:before {
+    content: ""
+}
+
+.vc-icon-search-favourites:before {
+    content: ""
+}
+
+.vc-icon-search:before {
+    content: ""
+}
+
+.vc-icon-secure:before {
+    content: ""
+}
+
+.vc-icon-services:before {
+    content: ""
+}
+
+.vc-icon-settings:before {
+    content: ""
+}
+
+.vc-icon-share-facebook:before {
+    content: ""
+}
+
+.vc-icon-share-googleplus:before {
+    content: ""
+}
+
+.vc-icon-share-twitter:before {
+    content: ""
+}
+
+.vc-icon-share:before {
+    content: ""
+}
+
+.vc-icon-show:before {
+    content: ""
+}
+
+.vc-icon-single:before {
+    content: ""
+}
+
+.vc-icon-social-media:before {
+    content: ""
+}
+
+.vc-icon-spa:before {
+    content: ""
+}
+
+.vc-icon-special-offer:before {
+    content: ""
+}
+
+.vc-icon-star-empty:before {
+    content: ""
+}
+
+.vc-icon-star-filled:before {
+    content: ""
+}
+
+.vc-icon-star-medium:before {
+    content: ""
+}
+
+.vc-icon-star:before {
+    content: ""
+}
+
+.vc-icon-stars-0:before {
+    content: ""
+}
+
+.vc-icon-stars-5:before {
+    content: ""
+}
+
+.vc-icon-stars-10:before {
+    content: ""
+}
+
+.vc-icon-stars-15:before {
+    content: ""
+}
+
+.vc-icon-stars-20:before {
+    content: ""
+}
+
+.vc-icon-stars-25:before {
+    content: ""
+}
+
+.vc-icon-stars-30:before {
+    content: ""
+}
+
+.vc-icon-stars-35:before {
+    content: ""
+}
+
+.vc-icon-stars-40:before {
+    content: ""
+}
+
+.vc-icon-stars-45:before {
+    content: ""
+}
+
+.vc-icon-stars-50:before {
+    content: ""
+}
+
+.vc-icon-suitcase:before {
+    content: ""
+}
+
+.vc-icon-swarm-button:before {
+    content: ""
+}
+
+.vc-icon-swimming-pool:before {
+    content: ""
+}
+
+.vc-icon-time:before {
+    content: ""
+}
+
+.vc-icon-timetable-header:before {
+    content: ""
+}
+
+.vc-icon-train-hotel:before {
+    content: ""
+}
+
+.vc-icon-train:before {
+    content: ""
+}
+
+.vc-icon-transfer:before {
+    content: ""
+}
+
+.vc-icon-travel:before {
+    content: ""
+}
+
+.vc-icon-tripadvisor:before {
+    content: ""
+}
+
+.vc-icon-trustly:before {
+    content: ""
+}
+
+.vc-icon-tumbler-button:before {
+    content: ""
+}
+
+.vc-icon-twitter:before {
+    content: ""
+}
+
+.vc-icon-up:before {
+    content: ""
+}
+
+.vc-icon-upload-document:before {
+    content: ""
+}
+
+.vc-icon-url-certificate:before {
+    content: ""
+}
+
+.vc-icon-user:before {
+    content: ""
+}
+
+.vc-icon-verify-list:before {
+    content: ""
+}
+
+.vc-icon-verify:before {
+    content: ""
+}
+
+.vc-icon-viajescarrefour-logotipo:before {
+    content: ""
+}
+
+.vc-icon-vimeo-button:before {
+    content: ""
+}
+
+.vc-icon-visa-electron:before {
+    content: ""
+}
+
+.vc-icon-visa:before {
+    content: ""
+}
+
+.vc-icon-waiting:before {
+    content: ""
+}
+
+.vc-icon-warning:before {
+    content: ""
+}
+
+.vc-icon-warranty:before {
+    content: ""
+}
+
+.vc-icon-waves:before {
+    content: ""
+}
+
+.vc-icon-whatsapp-button:before {
+    content: ""
+}
+
+.vc-icon-wifi:before {
+    content: ""
+}
+
+.vc-icon-wrong:before {
+    content: ""
+}
+
+.vc-icon-xls:before {
+    content: ""
+}
+
+.vc-icon-youtube:before {
+    content: ""
+}
+
+.vc-icon-amex:before {
+    content: ""
+}
+
+.vc-icon-seat:before {
+    content: ""
+}
+
+.vc-icon-aeroplane-up:before {
+    content: ""
+}
+
+.vc-icon-aeroplane-down:before {
+    content: ""
+}
+
+.vc-icon-t-target:before {
+    content: ""
+}
+
+.vc-icon-times:before {
+    content: "";
+    color: #ffa219
+}
+
+.vc-icon-moon:before {
+    content: ""
+}
+
+.vc-icon-map-poi:before {
+    content: ""
+}
+
+.vc-icon-phone-operator:before {
+    content: ""
+}
+
+.vc-icon-phone-operator-black:before {
+    content: ""
+}
+
+.vc-icon-transfer-bus:before {
+    content: ""
+}
+
+.vc-icon-hotel-bed:before {
+    content: ""
+}
+
+.vc-icon-checked:before {
+    content: ""
+}
+
+.vc-icon-tickets:before {
+    content: ""
+}
+
+.vc-icon-aeroplane-right:before {
+    content: ""
+}
+
+.vc-icon-credit-card:before {
+    content: ""
+}
+
+.vc-icon-luggage-not-included:before {
+    content: "" !important
+}
+
+footer{
+	background-color: #333;
+	.featured-links{
+		ul{
+			width: 100%;
+			max-width: 1440px;
+			margin: 0 auto;
+		}
+		background-image: url(../img/pattern-footer.png);
+		[class^=vc-icon]:before {
+		    font-size: 75px;
+		}
+		[class="vc-icon-pass-card"]:before {
+		    font-size: 45px;
+		}
+	}
+	.direct-links{
+		.direct-links-container{
+			margin: 10px auto;
+			max-width: 1440px;
+			box-sizing: border-box;
+		}
+		.flag-icon{
+			width: 14px;
+			height: 14px;
+			padding-right: 3px;
+			margin-bottom: 4px;
+			display: inline-block;
+		}
+	}
+	.direct-links-icon-item span {
+    	font-size: 42px;
+    	color:#333;
+	}
+	.direct-links-block .vc-icon-cdti-logo {
+    	font-size: 32px;
+	}
+	.footer-end {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: -ms-flexbox;
+        display: flex;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .footer-end .social-links {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-order: 2;
+        order: 2
+    }
+    .footer-end .legal-block {
+        -ms-flex-positive: 5;
+        flex-grow: 5;
+        -ms-flex-order: 0;
+        order: 0
+    }
+    .social-links a {
+        color: #fff;
+        font-size: 50px
+    }
+
+	.legal-block {
+	    box-sizing: border-box;
+	    background: #333
+	}
+	.legal-block a {
+	    box-sizing: border-box;
+	    color: #fff;
+	    font-size: 14px
+	}
+	.legal-block a:hover {
+	    text-decoration: underline
+	}
+	.legal-block li {
+	    color: #fff;
+	    font-size: 14px;
+	    text-transform: uppercase;
+	    font-weight: normal;
+	}
+	@media screen and (min-width: 1366px){
+		.footer-end .legal-block {
+		    -ms-flex-positive: 5;
+		    flex-grow: 5;
+		    -ms-flex-order: 0;
+		    order: 0;
+		}
+	}
+	@media screen and (min-width: 768px){
+		.legal-block ul li {
+		    -ms-flex-positive: 1;
+		    flex-grow: 1;
+		    margin-right: 50px;
+		}
+	}
 }
 /* purgecss end ignore */
