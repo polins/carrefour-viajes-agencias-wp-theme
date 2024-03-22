@@ -106,6 +106,52 @@ function localidad_custom_taxonomy() {
 }
 add_action( 'init', 'localidad_custom_taxonomy', 0 );
 
+
+
+// Register Custom Taxonomy
+function zip_custom_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Códigos postales', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Código postal', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Código postal', 'text_domain' ),
+		'all_items'                  => __( 'All Códigos postales', 'text_domain' ),
+		'parent_item'                => __( 'Parent Código postal', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Código postal:', 'text_domain' ),
+		'new_item_name'              => __( 'New Código postal Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Código postal', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Código postal', 'text_domain' ),
+		'update_item'                => __( 'Update Código postal', 'text_domain' ),
+		'view_item'                  => __( 'View Código postal', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Códigos postales', 'text_domain' ),
+		'search_items'               => __( 'Search Items', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Items list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'Código postal',
+		'with_front'                 => false,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'zip', array( 'agencia' ), $args );
+
+}
+add_action( 'init', 'zip_custom_taxonomy', 0 );
+
 function na_remove_slug( $post_link, $post, $leavename ) {
 
     if ( 'agencia' != $post->post_type || 'publish' != $post->post_status ) {

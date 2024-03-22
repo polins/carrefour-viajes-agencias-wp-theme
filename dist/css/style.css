@@ -2042,6 +2042,12 @@ header .header-elements li a:hover:after {
   width: 100%;
 }
 
+.site-container {
+  margin: 10px auto;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
 .hover\:opacity-50:hover{
   opacity: 0.5 !important;
 }
