@@ -171,3 +171,58 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * 
+ * 
+function agencias_function() {
+    // do shortcode actions here
+    // https://www.viajes-carrefour.com/agencias-viajes/wp-admin/admin.php?page=company-import
+    $output = "";
+
+	  $temp = $wp_query; 
+	  $wp_query = null; 
+	  $wp_query = new WP_Query(); 
+	  $wp_query->query('showposts=999&post_type=company'); 
+
+  	while ($wp_query->have_posts()) : $wp_query->the_post(); 
+
+  		$output .= get_the_post_thumbnail_url(get_the_ID(), 'full');
+  		$output .=";";
+  		$output .= get_the_title();
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_address_name')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs1')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs2')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs3')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs4')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs5')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs6')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_openhrs7')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_doc_phone')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_company_soc_email')[0];
+  		$output .=";";
+  		$output .= get_post_meta(get_the_ID(),'metro_address_region_name')[0];
+  		$output .=";";
+  		$output .= "<br/>";
+
+  	 endwhile;
+
+  	   $wp_query = null; 
+  $wp_query = $temp;  // Reset
+
+  	 return $output;
+
+}
+add_shortcode( 'agencias', 'agencias_function' );
+
+*/
