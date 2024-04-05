@@ -38,7 +38,7 @@ add_action( 'wp_head', 'carrefour_viajes_agencias_pingback_header' );
 
 function my_acf_google_map_api( $api ){
 		$api['language'] = 'es';
-        $api['key'] = 'AIzaSyBVJgl6Z6o6yffjc4b-nDfTSOSSFcvGYNE&language'; /* my key is here */
+        $api['key'] = 'AIzaSyBVJgl6Z6o6yffjc4b-nDfTSOSSFcvGYNE'; /* my key is here */
         //$api['key'] = 'AIzaSyDj6WGGG2wI6FoPFhD1R72F11XwyVD-mLg'; /* my key is here */
         return $api;
 }

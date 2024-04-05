@@ -7,7 +7,7 @@ module.exports = {
       screens:{
          sm: "100%",
          md: "100%",
-         lg: "1024px",
+         lg: "1280px",
          xl: "1280px"
       }
     },
@@ -17,6 +17,10 @@ module.exports = {
       blue:{
         DEFAULT:'#00a7df',
         dark:'#005098',
+      },
+      gray:{
+        DEFAULT:'#40555c',
+        light:'#eaeaea',
       },
     },
     fontFamily:{
