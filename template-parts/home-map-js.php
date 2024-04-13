@@ -10,7 +10,7 @@
 		 while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
 		 	$direccion = get_field('direccion');
-			echo "['".get_the_title()."', ".$direccion['lat'].",".$direccion['lng']."],";
+			echo "['<a href=\"".get_the_permalink()."\">".get_the_title()."</a>', ".$direccion['lat'].",".$direccion['lng']."],";
 
 	?>
 

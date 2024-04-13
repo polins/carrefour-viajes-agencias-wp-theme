@@ -22,6 +22,7 @@ module.exports = {
         DEFAULT:'#40555c',
         light:'#eaeaea',
       },
+      whatsapp : '#25d366',
     },
     fontFamily:{
       'sans':['Lato', 'sans-serif'],
