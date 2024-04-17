@@ -219,7 +219,7 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 img,
 svg,
-video,
+iframe,
 object {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
@@ -227,8 +227,7 @@ object {
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
-img,
-video {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -375,6 +374,10 @@ video {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
+.my-20{
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
 .mb-0{
   margin-bottom: 0px !important;
 }
@@ -390,8 +393,14 @@ video {
 .mb-5{
   margin-bottom: 1.25rem !important;
 }
+.ml-3{
+  margin-left: 0.75rem !important;
+}
 .ml-auto{
   margin-left: auto !important;
+}
+.mr-10{
+  margin-right: 2.5rem !important;
 }
 .mr-2{
   margin-right: 0.5rem !important;
@@ -402,14 +411,17 @@ video {
 .mt-0{
   margin-top: 0px !important;
 }
-.mt-5{
-  margin-top: 1.25rem !important;
-}
-.ml-3{
-  margin-left: 0.75rem !important;
+.mt-10{
+  margin-top: 2.5rem !important;
 }
 .mt-2{
   margin-top: 0.5rem !important;
+}
+.mt-5{
+  margin-top: 1.25rem !important;
+}
+.mb-14{
+  margin-bottom: 3.5rem !important;
 }
 .block{
   display: block !important;
@@ -420,6 +432,9 @@ video {
 .flex{
   display: flex !important;
 }
+.grid{
+  display: grid !important;
+}
 .w-full{
   width: 100% !important;
 }
@@ -429,6 +444,9 @@ video {
 .flex-grow{
   flex-grow: 1 !important;
 }
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
 .cursor-pointer{
   cursor: pointer !important;
 }
@@ -436,9 +454,11 @@ video {
   -moz-columns: 2 !important;
        columns: 2 !important;
 }
-.columns-3{
-  -moz-columns: 3 !important;
-       columns: 3 !important;
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 }
 .flex-col{
   flex-direction: column !important;
@@ -457,6 +477,12 @@ video {
 }
 .gap-10{
   gap: 2.5rem !important;
+}
+.gap-5{
+  gap: 1.25rem !important;
+}
+.gap-1{
+  gap: 0.25rem !important;
 }
 .overflow-hidden{
   overflow: hidden !important;
@@ -511,6 +537,10 @@ video {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
+.bg-gray-light{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(234 234 234 / var(--tw-bg-opacity)) !important;
+}
 .bg-cover{
   background-size: cover !important;
 }
@@ -523,8 +553,14 @@ video {
 .p-2{
   padding: 0.5rem !important;
 }
+.p-3{
+  padding: 0.75rem !important;
+}
 .p-4{
   padding: 1rem !important;
+}
+.p-10{
+  padding: 2.5rem !important;
 }
 .px-0{
   padding-left: 0px !important;
@@ -548,6 +584,9 @@ video {
 }
 .pb-0{
   padding-bottom: 0px !important;
+}
+.pb-1{
+  padding-bottom: 0.25rem !important;
 }
 .pb-3{
   padding-bottom: 0.75rem !important;
@@ -587,6 +626,10 @@ video {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
 }
+.text-lg{
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
 .text-sm{
   font-size: 0.875rem !important;
   line-height: 1.25rem !important;
@@ -624,6 +667,10 @@ video {
 .text-blue-dark{
   --tw-text-opacity: 1 !important;
   color: rgb(0 80 152 / var(--tw-text-opacity)) !important;
+}
+.text-green{
+  --tw-text-opacity: 1 !important;
+  color: rgb(48 184 41 / var(--tw-text-opacity)) !important;
 }
 .text-white{
   --tw-text-opacity: 1 !important;
@@ -2217,6 +2264,31 @@ header .header-elements li a:hover:after {
   box-sizing: border-box;
 }
 
+.acf-map {
+  width: 100%;
+  height: 300px;
+}
+
+.acf-map img {
+  max-width: inherit !important;
+}
+
+.columns-agencia .column-1 {
+  width: 30%;
+  min-width: 30%;
+}
+.columns-agencia .column-2 {
+  min-width: calc(60% - 2.5rem);
+}
+.columns-agencia .column-2 .grid > div {
+  height: 300px;
+}
+.columns-agencia .column-2 .grid > div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+
 .hover\:bg-blue-dark:hover{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(0 80 152 / var(--tw-bg-opacity)) !important;
@@ -2225,6 +2297,10 @@ header .header-elements li a:hover:after {
 .hover\:text-white:hover{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline !important;
 }
 
 .hover\:opacity-50:hover{

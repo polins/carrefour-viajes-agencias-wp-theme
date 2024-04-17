@@ -433,6 +433,7 @@
 
 wp_footer(); 
 if(is_front_page()) {get_template_part( 'template-parts/home-map', 'js' );}
+if(is_taxonomy( 'localidad' )) {get_template_part( 'template-parts/localidad', 'js' );}
 
 ?>
 

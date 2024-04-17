@@ -41,7 +41,7 @@ function agencia_post_type() {
 		'description'           => __( 'Agencias de Viajes Carrefour', 'carrefour-viajes-agencias' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'              => array( 'localidad'),
+		'taxonomies'              => array( 'localidad','post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -99,7 +99,7 @@ function localidad_custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'rewrite'                    => $rewrite,
+		'rewrite'                    => false,
 	);
 	register_taxonomy( 'localidad', array( 'agencia' ), $args );
 
@@ -134,7 +134,7 @@ function zip_custom_taxonomy() {
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
 	);
 	$rewrite = array(
-		'slug'                       => 'Código postal',
+		'slug'                       => 'codigo-postal',
 		'with_front'                 => false,
 	);
 	$args = array(
