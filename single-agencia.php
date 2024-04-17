@@ -24,7 +24,7 @@ get_header();
 			<div class="container mx-auto">
 				<h1 class="text-3xl font-semibold text-blue mb-5"><?php the_title(); ?></h1>
 				<div class="flex columns-agencia">
-					<div class="column-1 mr-10 flex flex-col border border-gray-light p-4 pr-10">
+					<div class="column-1 mr-10 flex flex-col border border-gray-light p-4 mr-10">
 						
 						<div class="mb-5">
 							<div class="text-xl"><?php the_field('direccion_completa') ?></div>
