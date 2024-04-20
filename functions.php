@@ -165,6 +165,11 @@ require get_template_directory() . '/inc/cpt.php';
 require get_template_directory() . '/inc/enqueue.php';
 
 /**
+ * Gallery
+ */
+require get_template_directory() . '/inc/gallery.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
