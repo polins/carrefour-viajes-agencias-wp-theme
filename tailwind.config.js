@@ -13,13 +13,19 @@ module.exports = {
     },
     colors:{
       white:'#fff',
-      black:'#333',
+      black:{
+        DEFAULT:'#333',
+        alternative:'#666',
+      },
       blue:{
         DEFAULT:'#00a7df',
         dark:'#005098',
       },
       green:{
         DEFAULT:'#30b829',
+      },
+      red:{
+        DEFAULT:'#CC4230',
       },
       gray:{
         DEFAULT:'#40555c',

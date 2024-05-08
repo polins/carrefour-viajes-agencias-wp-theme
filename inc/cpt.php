@@ -62,6 +62,64 @@ function agencia_post_type() {
 }
 add_action( 'init', 'agencia_post_type', 0 );
 
+// Register Custom Post Type
+function promo_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Promociones', 'Post Type General Name', 'carrefour-viajes-agencias' ),
+		'singular_name'         => _x( 'Promoción', 'Post Type Singular Name', 'carrefour-viajes-agencias' ),
+		'menu_name'             => __( 'Promociones', 'carrefour-viajes-agencias' ),
+		'name_admin_bar'        => __( 'Promoción', 'carrefour-viajes-agencias' ),
+		'archives'              => __( 'Promoción Archives', 'carrefour-viajes-agencias' ),
+		'attributes'            => __( 'Promoción Attributes', 'carrefour-viajes-agencias' ),
+		'parent_item_colon'     => __( 'Parent Promoción:', 'carrefour-viajes-agencias' ),
+		'all_items'             => __( 'All Promociones', 'carrefour-viajes-agencias' ),
+		'add_new_item'          => __( 'Add New Promoción', 'carrefour-viajes-agencias' ),
+		'add_new'               => __( 'Add New', 'carrefour-viajes-agencias' ),
+		'new_item'              => __( 'Promoción Item', 'carrefour-viajes-agencias' ),
+		'edit_item'             => __( 'Edit Promoción', 'carrefour-viajes-agencias' ),
+		'update_item'           => __( 'Update ItemPromoción', 'carrefour-viajes-agencias' ),
+		'view_item'             => __( 'View Promoción', 'carrefour-viajes-agencias' ),
+		'view_items'            => __( 'View Promociones', 'carrefour-viajes-agencias' ),
+		'search_items'          => __( 'Search Promoción', 'carrefour-viajes-agencias' ),
+		'not_found'             => __( 'Not found', 'carrefour-viajes-agencias' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'carrefour-viajes-agencias' ),
+		'featured_image'        => __( 'Featured Image', 'carrefour-viajes-agencias' ),
+		'set_featured_image'    => __( 'Set featured image', 'carrefour-viajes-agencias' ),
+		'remove_featured_image' => __( 'Remove featured image', 'carrefour-viajes-agencias' ),
+		'use_featured_image'    => __( 'Use as featured image', 'carrefour-viajes-agencias' ),
+		'insert_into_item'      => __( 'Insert into item', 'carrefour-viajes-agencias' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'carrefour-viajes-agencias' ),
+		'items_list'            => __( 'Items list', 'carrefour-viajes-agencias' ),
+		'items_list_navigation' => __( 'Items list navigation', 'carrefour-viajes-agencias' ),
+		'filter_items_list'     => __( 'Filter items list', 'carrefour-viajes-agencias' ),
+	);
+	$args = array(
+		'label'                 => __( 'Promoción', 'carrefour-viajes-agencias' ),
+		'description'           => __( 'Promociones de Viajes Carrefour', 'carrefour-viajes-agencias' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title','thumbnail' ),
+		'taxonomies'              => false,
+		'hierarchical'          => false,
+		'public'                => false,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-megaphone',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => false,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'promocion', $args );
+
+}
+add_action( 'init', 'promo_post_type', 0 );
+
 // Register Custom Taxonomy
 function localidad_custom_taxonomy() {
 
@@ -93,7 +151,7 @@ function localidad_custom_taxonomy() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
@@ -145,7 +203,7 @@ function zip_custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'rewrite'                    => $rewrite,
+		'rewrite'                    => false,
 	);
 	register_taxonomy( 'zip', array( 'agencia' ), $args );
 

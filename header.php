@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'carrefour-viajes-agencias' ); ?></a>
 
 <header
-  class="flex static flex-wrap justify-between items-center py-2 px-4 m-0 text-sm leading-3 align-baseline border-t-0 border-b border-solid xl:px-12 xl:pt-8 lg:relative lg:w-full lg:px-5 lg:pt-8 border-x-0 border-neutral-200 text-stone-500 mb-5 pb-5"
+  class="flex static flex-wrap justify-between items-center py-2 px-4 m-0 text-sm leading-3 align-baseline xl:px-12 xl:pt-8 lg:relative lg:w-full lg:px-5 lg:pt-8 border-b border-gray-light text-stone-500 mb-5 pb-5"
 >
   <div class="logo-container p-0 m-0 align-baseline border-0 lg:-order-1">
     <div class="p-0 m-0 align-baseline border-0 lg:inline-block">
@@ -34,15 +34,10 @@
         href="https://www.viajes.carrefour.es/"
         class="p-0 m-0 align-baseline bg-transparent border-0 cursor-pointer text-sky-500"
         ><img
-          class="p-0 m-0 w-full align-baseline border-0"
+          class="p-0 m-0 w-full align-baseline border-0 logo"
           src="https://www.viajes.carrefour.es/statics/assets/images/base/crf_viajes_logo_h_colour_rgb-01.png"
           alt="Logo desktop"
       /></a>
-      <h1
-        class="px-0 pt-1 pb-0 m-0 w-full font-bold text-center align-baseline border-0 lg:pl-3 lg:text-left text-xs text-blue-dark"
-      >
-        Ofertas en viajes, hoteles, vuelos, cruceros
-      </h1>
     </div>
   </div>
 
@@ -56,17 +51,11 @@
     </ul>
     </div>
     <nav class="main-menu p-0 m-0 align-baseline border-0" role="navigation">
-      <ul class="header-elements">
-      <li><a href="https://www.viajes.carrefour.es/circuitos" title="Circuitos">Circuitos</a></li>
-      <li><a href="https://www.viajes.carrefour.es/viajar/egipto" title="Egipto">Egipto 75%</a></li>
-      <li><a href="https://www.viajes.carrefour.es/cruceros" title="Cruceros">Cruceros</a></li>
-      <li><a href="https://www.viajes.carrefour.es/viajar/caribe" title="Viajes al Caribe">Caribe</a></li>
-      <li><a href="https://www.viajes.carrefour.es/disney" title="Ofertas viajes Disneyland Paris">Disneyland Paris</a></li>
-      <li><a href="https://www.viajes.carrefour.es/portaventura" title="Ofertas Portaventura">Portaventura</a></li>
-      <li><a href="https://www.viajes.carrefour.es/hoteles" title="Hoteles baratos">Hoteles</a></li>
-      <li><a href="https://www.viajes.carrefour.es/vuelo-hotel" title="Vuelo más hotel barato">Vuelo + hotel</a></li>
-      <li><a href="https://www.viajes.carrefour.es/vuelos" title="Vuelos baratos">Vuelos</a></li>
-      </ul>
+      <?php wp_nav_menu( array(
+        'menu'            => 'Menu principal',
+        'container_class' => 'menu-{menu-slug}-container',
+        'menu_class'      => 'header-elements',
+      ) ); ?>
     </nav>
     
   </div>

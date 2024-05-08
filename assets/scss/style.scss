@@ -6,7 +6,7 @@
 
 /* purgecss start ignore */
 body{
-	@apply font-light
+	@apply font-light text-black
 }
 
 @font-face {
@@ -1533,6 +1533,9 @@ footer{
 }
 header{
     flex-direction: row;
+    .logo{
+    	max-width:200px; 
+    }
     .right-header{
         max-width: 70%;
     }
@@ -1630,6 +1633,40 @@ header{
 				height: 300px;
 			}
 		}
+	}
+}
+
+.tags > span:not(:last-of-type):after{
+	content:", ";
+}
+
+.promociones-block{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow-x: scroll;
+	scrollbar-width: none;
+	.wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 768px){
+			flex-wrap: nowrap;
+		}
+        justify-content: flex-start;
+		> div{
+			min-width: 25%;
+			width: 25%;
+			@media (max-width: 1200px){
+				min-width: 33.33%;
+				width: 33.33%;
+			}
+			@media (max-width: 768px){
+				min-width: 60%;
+			}
+			@apply px-5
+		}
+		@apply -mx-5
 	}
 }
 
