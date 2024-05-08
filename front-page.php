@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div class="container mx-auto">
+	<div class="container mx-auto site-container">
 
 		<div class="mx-auto mb-10 max-w-2xl">
 			<div class="flex">
@@ -30,7 +30,7 @@ get_header();
 		<h1 class="font-medium text-2xl mb-2">Busca tu agencia de viajes Viajes Carrefour</h1>
 		<h2 class="mb-5">Encuentra tu agencia Viajes Carrefour más cercana</h2>
 
-		<div class="columns-2 mb-10">
+		<div class="flex flex-col-reverse md:block md:columns-2 mb-10">
 			<div style="max-height: 700px;" class="overflow-y-scroll">
 				<?php
 
@@ -50,7 +50,7 @@ get_header();
 
 
 			</div>
-			<div id="map" style="height:700px" class="rounded border border-gray-light"></div>
+			<div id="map" style="height:700px" class="mb-5 md:mb-0 rounded border border-gray-light"></div>
 		</div>
 
 	</div>
@@ -58,17 +58,17 @@ get_header();
 	<div class="bg-gray-light p-10 my-20">
 		<div class="container mx-auto">
 
-			<iframe  class="mx-auto" src="https://player.vimeo.com/video/385199405?h=7a673fdb5e&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			<iframe  class="mx-auto w-full" src="https://player.vimeo.com/video/385199405?h=7a673fdb5e&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 		</div>
 	</div>
 
 
-	<div class="container mx-auto">
+	<div class="site-container container mx-auto">
 
 		<div class="my-20">
-			<div class="text-xl text-blue text-center mb-5">
-				Aquí están todas nuestras Agencias de viajes <strong>Viajes Carrefour</strong>:
+			<div class="text-xl text-center mb-5">
+				Aquí están todas nuestras Agencias de viajes Viajes Carrefour:
 			</div>
 
 			<?php 
@@ -80,11 +80,11 @@ get_header();
 
 				?>
 
-			<div class="grid grid-cols-4 gap-1">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-1">
 				<?php foreach ($terms as $term) {  if(get_field('tipo', $term) == 'provincia'){ ?>
 					
 					<div>
-						<a href="<?php echo get_term_link( $term->term_id ); ?>" class="hover:underline text-black-alternative"><?php echo $term->name; ?></a> 
+						<a href="<?php echo get_term_link( $term->term_id ); ?>" class="text-center md:text-left hover:underline text-black-alternative"><?php echo $term->name; ?></a> 
 						<?php if($term->count > 1) { ?>
 							(<?php echo $term->count; ?> agencias)
 						<?php } else { ?>

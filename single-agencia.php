@@ -24,9 +24,9 @@ get_header();
 			<div class="container mx-auto">
 				<h1 class="text-2xl font-semibold mb-2"><?php the_title(); ?></h1>
 				<div class="mb-5 text-sm"><?php echo do_shortcode('[wpseo_breadcrumb]'); ?></div>
-				<div class="grid grid-cols-2 gap-10 mb-5">
+				<div class="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-10 mb-5">
 					
-					<div>
+					<div class="mt-5 md:mt-0">
 						<?php $photos_query = get_post_meta( $post->ID, 'gallery_data', true ); if($photos_query) { ?>
 
 							<div class="cycle-slideshow"
@@ -57,6 +57,44 @@ get_header();
 						<div class="mt-5">
 							<?php the_content(); ?>
 						</div>
+
+						<?php if(have_rows('review')) { ?>
+
+								<div class="cycle-slideshow mt-5 opinions" data-cycle-fx=carousel data-cycle-timeout=5000 data-cycle-carousel-fluid=true data-cycle-slides=".wrapper">
+									
+									<?php  while( have_rows('review') ) : the_row(); ?>
+
+										<a rel="nofollow" target="_blank" href="<?php  echo get_sub_field('enlace'); ?>" class="wrapper bg-blue-light p-2">
+
+											<div class="mb-2 flex">
+												<div class="star"></div>
+												<div class="star"></div>
+												<div class="star"></div>
+												<?php if(get_sub_field('stars') == 4) { ?>
+													<div class="star"></div>
+												<?php } ?>
+												<?php if(get_sub_field('stars') == 4.5) { ?>
+													<div class="star star-half"></div>
+												<?php } ?>
+												<?php if(get_sub_field('stars') == 5) { ?>
+													<div class="star"></div>
+													<div class="star"></div>
+												<?php } ?>
+											</div>
+
+											<div class="mb-2 text-sm font-semibold"><?php echo get_sub_field('nombre'); ?></div>
+
+											<div class="content-text mb-2 text-sm">
+												<?php if (strlen(get_sub_field('texto')) > 130) {echo substr(get_sub_field('texto'), 0, 130); echo "...";} else {echo get_sub_field('texto'); }  ?>
+											</div>
+											
+										</a>
+
+									<?php endwhile; ?>
+
+								</div>
+
+						<?php } ?>
 
 					</div>
 

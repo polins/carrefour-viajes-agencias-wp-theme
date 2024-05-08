@@ -14,6 +14,7 @@ function carrefour_enqueue() {
 
 	if(is_singular('agencia')){
 		wp_enqueue_script( 'cycle', get_template_directory_uri() . '/dist/js/jquery.cycle2.min.js', array(), _S_VERSION, true );
+		wp_enqueue_script( 'cycle-carrousel', get_template_directory_uri() . '/dist/js/jquery.cycle2.carousel.min.js', array(), _S_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'carrefour_enqueue' );

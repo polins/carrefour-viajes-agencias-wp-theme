@@ -463,18 +463,14 @@ img {
 .cursor-pointer{
   cursor: pointer !important;
 }
-.columns-2{
-  -moz-columns: 2 !important;
-       columns: 2 !important;
-}
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-}
 .flex-col{
   flex-direction: column !important;
+}
+.flex-col-reverse{
+  flex-direction: column-reverse !important;
 }
 .flex-wrap{
   flex-wrap: wrap !important;
@@ -490,9 +486,6 @@ img {
 }
 .gap-1{
   gap: 0.25rem !important;
-}
-.gap-10{
-  gap: 2.5rem !important;
 }
 .overflow-hidden{
   overflow: hidden !important;
@@ -535,6 +528,10 @@ img {
 .bg-blue-dark{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(0 80 152 / var(--tw-bg-opacity)) !important;
+}
+.bg-blue-light{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(194 235 237 / var(--tw-bg-opacity)) !important;
 }
 .bg-gray-light{
   --tw-bg-opacity: 1 !important;
@@ -657,10 +654,6 @@ img {
 .text-black-alternative{
   --tw-text-opacity: 1 !important;
   color: rgb(102 102 102 / var(--tw-text-opacity)) !important;
-}
-.text-blue{
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 167 223 / var(--tw-text-opacity)) !important;
 }
 .text-green{
   --tw-text-opacity: 1 !important;
@@ -2368,6 +2361,39 @@ header .header-elements li a:hover:after {
   transition: opacity 0.4s ease-in;
 }
 
+.opinions .wrapper {
+  max-width: 200px;
+  margin-right: 15px;
+}
+.opinions .content-text {
+  height: 100px;
+  overflow: hidden;
+  white-space: normal;
+}
+.opinions .star {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/star.svg);
+}
+.opinions .star.star-half {
+  background-image: url(../img/half-star.svg);
+}
+
+@media (max-width: 1470px) {
+  .site-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.error-404.not-found img {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 .hover\:underline:hover{
   text-decoration-line: underline !important;
 }
@@ -2405,8 +2431,20 @@ header .header-elements li a:hover:after {
 }
 
 @media (min-width: 768px){
+  .md\:mb-0{
+    margin-bottom: 0px !important;
+  }
+  .md\:mt-0{
+    margin-top: 0px !important;
+  }
+  .md\:block{
+    display: block !important;
+  }
   .md\:flex{
     display: flex !important;
+  }
+  .md\:grid{
+    display: grid !important;
   }
   .md\:w-1\/4{
     width: 25% !important;
@@ -2414,8 +2452,21 @@ header .header-elements li a:hover:after {
   .md\:flex-grow{
     flex-grow: 1 !important;
   }
+  .md\:columns-2{
+    -moz-columns: 2 !important;
+         columns: 2 !important;
+  }
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
   .md\:flex-row{
     flex-direction: row !important;
+  }
+  .md\:gap-10{
+    gap: 2.5rem !important;
   }
   .md\:pb-3{
     padding-bottom: 0.75rem !important;

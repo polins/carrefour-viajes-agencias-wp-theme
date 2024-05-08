@@ -147,7 +147,7 @@ function localidad_custom_taxonomy() {
 	);
 	$rewrite = array(
 		'slug'                       => 'localidad',
-		'with_front'                 => false,
+		'with_front'                 => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -157,7 +157,7 @@ function localidad_custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'rewrite'                    => false,
+		'rewrite'                    => $rewrite,
 	);
 	register_taxonomy( 'localidad', array( 'agencia' ), $args );
 
@@ -193,7 +193,7 @@ function zip_custom_taxonomy() {
 	);
 	$rewrite = array(
 		'slug'                       => 'codigo-postal',
-		'with_front'                 => false,
+		'with_front'                 => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -203,7 +203,7 @@ function zip_custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
-		'rewrite'                    => false,
+		'rewrite'                    => $rewrite,
 	);
 	register_taxonomy( 'zip', array( 'agencia' ), $args );
 

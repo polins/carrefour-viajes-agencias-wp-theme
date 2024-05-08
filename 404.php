@@ -10,48 +10,22 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main site-container">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'carrefour-viajes-agencias' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'carrefour-viajes-agencias' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'carrefour-viajes-agencias' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$carrefour_viajes_agencias_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'carrefour-viajes-agencias' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$carrefour_viajes_agencias_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
+			<h1 class="font-medium text-center text-xl mb-2">Parece que no encontramos la página que estás buscando...</h1>
+			<img src="/wp-content/uploads/2024/05/error-background.jpg" alt="Página 404" class="mx-auto mb-5">
+			<div class="mb-10 text-center flex flex-col">
+				<div class="mb-2">
+					<a href="javascript:void(0);" onclick="history.back()">Volver a la página anterior</a>
+				</div>
+				<div class="mb-2">
+					<a href="https://www.viajes.carrefour.es/">Ir a la página de inicio de Viajes Carrefour</a>
+				</div>
+				<div>
+					<a href="<?php bloginfo('url'); ?>">Volver a todas las agencias</a>
+				</div>
+			</div>
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->

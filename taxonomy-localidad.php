@@ -18,13 +18,13 @@ $qobj = get_queried_object();
 
 ?>
 
-	<div class="container mx-auto">
+	<div class="site-container container mx-auto">
 
 		<div class="mb-10">
 			<h1 class="font-medium text-xl mb-2">Agencias de viajes en <strong><?php echo $qobj->name; ?></strong></h1>
 		</div>
 
-		<div class="columns-2 mb-20">
+		<div class="flex flex-col-reverse md:block md:columns-2 mb-20">
 			<div style="max-height: 700px;" class="overflow-y-scroll">
 
 				<?php if ( have_posts() ) :
@@ -38,7 +38,7 @@ $qobj = get_queried_object();
 
 			</div>
 
-			<div id="map" style="height:700px" class="rounded border border-gray-light"></div>
+			<div id="map" style="height:700px" class="mb-5 md:mb-0 rounded border border-gray-light"></div>
 		</div>
 
 		<?php get_template_part( 'template-parts/content-promociones' ); ?>
