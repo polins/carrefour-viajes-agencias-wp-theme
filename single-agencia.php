@@ -27,7 +27,32 @@ get_header();
 				<div class="grid grid-cols-2 gap-10 mb-5">
 					
 					<div>
-						<?php the_post_thumbnail('full') ?>
+						<?php $photos_query = get_post_meta( $post->ID, 'gallery_data', true ); if($photos_query) { ?>
+
+							<div class="cycle-slideshow"
+						    data-cycle-fx=fadeout
+						    data-cycle-timeout=8000
+						    data-cycle-prev=#prev
+						    data-cycle-next=#next
+							data-cycle-auto-height=container>
+								<?php the_post_thumbnail('full'); ?>
+								
+								<?php 
+									foreach ($photos_query['image_url']  as $photo ) {
+								?>
+								 	<img class="gallery-img" src="<?php echo $photo; ?>" alt=""/>
+
+								<?php 
+									}
+								?>
+
+								<div id="prev" class="nav nav-prev">Anterior</div>
+								<div id="next" class="nav nav-next">Siguiente</div>
+
+							</div>
+
+
+						<?php } else { the_post_thumbnail('full'); } ?>
 
 						<div class="mt-5">
 							<?php the_content(); ?>
@@ -64,6 +89,24 @@ get_header();
 							<?php if(get_field('pagina_web')) { ?>
 								<div class="mb-3">
 									<a href="<?php the_field('pagina_web') ?>" class="flex items-center"><svg width="15px" height="15px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#333" fill="none" class="mr-2"><path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"/><path d="M37.86,51.1A47,47,0,0,1,32,56.7"/><path d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"/><path d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24"/><line x1="10.37" y1="19.9" x2="53.75" y2="19.9"/><line x1="32" y1="6.99" x2="32" y2="56.7"/><line x1="11.05" y1="45.48" x2="37.04" y2="45.48"/><line x1="7.14" y1="32.46" x2="56.86" y2="31.85"/><path d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"/></svg> <?php the_field('pagina_web') ?></a>
+								</div>
+							<?php } ?>
+
+							<?php if(has_tag()) { ?>
+								<div class="flex items-center mt-2 mb-1"><svg class="mr-2" fill="#333" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.486 473.486" xml:space="preserve"><polygon points="473.486,182.079 310.615,157.952 235.904,11.23 162.628,158.675 0,184.389 117.584,299.641 91.786,462.257 237.732,386.042 384.416,460.829 357.032,298.473 "/></svg> 
+
+									<span class="tags">
+										<?php 
+											$tags = array();
+											$posttags = get_the_tags(); 
+										 	if ($posttags) {
+										    foreach($posttags as $tag) {
+										    	echo "<span>".$tag->name."</span>";
+										    }
+										  }
+										?>
+
+									</span>
 								</div>
 							<?php } ?>
 

@@ -427,6 +427,9 @@ img {
 .mt-10{
   margin-top: 2.5rem !important;
 }
+.mt-2{
+  margin-top: 0.5rem !important;
+}
 .mt-5{
   margin-top: 1.25rem !important;
 }
@@ -659,17 +662,17 @@ img {
   --tw-text-opacity: 1 !important;
   color: rgb(0 167 223 / var(--tw-text-opacity)) !important;
 }
-.text-white{
+.text-green{
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  color: rgb(48 184 41 / var(--tw-text-opacity)) !important;
 }
 .text-red{
   --tw-text-opacity: 1 !important;
   color: rgb(204 66 48 / var(--tw-text-opacity)) !important;
 }
-.text-green{
+.text-white{
   --tw-text-opacity: 1 !important;
-  color: rgb(48 184 41 / var(--tw-text-opacity)) !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 .outline-none{
   outline: 2px solid transparent !important;
@@ -2329,6 +2332,40 @@ header .header-elements li a:hover:after {
   .promociones-block .wrapper > div {
     min-width: 60%;
   }
+}
+
+.cycle-slideshow .nav {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: blue;
+  z-index: 101;
+  text-indent: -9999px;
+  cursor: pointer;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center;
+  background-image: url(../img/chevron-white.svg);
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 80 152 / var(--tw-bg-opacity));
+}
+.cycle-slideshow .nav.nav-prev {
+  left: 15px;
+  transform: rotate(90deg);
+}
+.cycle-slideshow .nav.nav-next {
+  right: 15px;
+  transform: rotate(-90deg);
+}
+.cycle-slideshow:hover .nav {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
 }
 
 .hover\:underline:hover{

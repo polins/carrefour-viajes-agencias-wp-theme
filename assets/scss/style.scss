@@ -1670,4 +1670,41 @@ header{
 	}
 }
 
+.cycle-slideshow{
+	.nav{
+		position: absolute;
+		height: 40px;
+		width: 40px;
+		background: blue;
+		z-index: 101;
+		text-indent: -9999px;
+		cursor: pointer;
+		top: 0;
+		margin: auto;
+		bottom: 0;
+	    background-size: 22px;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    transform-origin: center;
+		background-image: url(../img/chevron-white.svg);
+		opacity: 0;
+		transition: opacity 0.4s ease-in;
+		&.nav-prev{
+			left:15px;
+			transform: rotate(90deg);
+		}
+		&.nav-next{
+			right:15px;
+			transform: rotate(-90deg);
+		}
+		@apply bg-blue-dark
+	}
+	&:hover{
+		.nav{
+			opacity: 1;
+			transition: opacity 0.4s ease-in;
+		}
+	}
+}
+
 /* purgecss end ignore */
