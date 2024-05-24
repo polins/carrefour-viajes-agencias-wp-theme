@@ -40,7 +40,7 @@
 	      marker = new google.maps.Marker({
 	        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 	        map: map,
-	        icon: "wp-content/themes/carrefour-viajes-agencias/dist/img/map-marker.svg"
+	        icon: "/wp-content/themes/carrefour-viajes-agencias/dist/img/map-marker.svg"
 	      });
 
 	      google.maps.event.addListener(marker, 'click', (function(marker, i) {

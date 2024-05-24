@@ -31,6 +31,7 @@ module.exports = {
       gray:{
         DEFAULT:'#40555c',
         light:'#eaeaea',
+        medium:'#333',
       },
       whatsapp : '#25d366',
     },

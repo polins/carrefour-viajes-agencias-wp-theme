@@ -1534,7 +1534,7 @@ footer{
 header{
     flex-direction: row;
     .logo{
-    	max-width:200px; 
+    	max-width:180px; 
     }
     .right-header{
         max-width: 70%;
@@ -1655,15 +1655,14 @@ header{
 		}
         justify-content: flex-start;
 		> div{
-			min-width: 25%;
-			width: 25%;
-			@media (max-width: 1200px){
-				min-width: 33.33%;
-				width: 33.33%;
-			}
+            min-width: 33.33%;
+            width: 33.33%;
 			@media (max-width: 768px){
 				min-width: 60%;
 			}
+            img{
+                width: 100%;
+            }
 			@apply px-5
 		}
 		@apply -mx-5
@@ -1687,8 +1686,6 @@ header{
 	    background-position: center;
 	    transform-origin: center;
 		background-image: url(../img/chevron-white.svg);
-		opacity: 0;
-		transition: opacity 0.4s ease-in;
 		&.nav-prev{
 			left:15px;
 			transform: rotate(90deg);
@@ -1698,12 +1695,6 @@ header{
 			transform: rotate(-90deg);
 		}
 		@apply bg-blue-dark
-	}
-	&:hover{
-		.nav{
-			opacity: 1;
-			transition: opacity 0.4s ease-in;
-		}
 	}
 }
 
@@ -1742,6 +1733,16 @@ header{
     img{
         margin:0 auto;
         max-width: 800px
+    }
+}
+
+#agencia-list{
+    max-height: 700px;
+}
+@media (max-width: 980px){
+    #map,
+    #agencia-list{
+        max-height: 70vh;
     }
 }
 

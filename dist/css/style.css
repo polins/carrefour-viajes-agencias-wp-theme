@@ -220,7 +220,6 @@ Make sure disabled buttons don't get the pointer cursor.
 */
 img,
 svg,
-iframe,
 object {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
@@ -433,6 +432,9 @@ img {
 .mt-5{
   margin-top: 1.25rem !important;
 }
+.-mt-5{
+  margin-top: -1.25rem !important;
+}
 .block{
   display: block !important;
 }
@@ -462,9 +464,6 @@ img {
 }
 .cursor-pointer{
   cursor: pointer !important;
-}
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 .flex-col{
   flex-direction: column !important;
@@ -529,13 +528,13 @@ img {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(0 80 152 / var(--tw-bg-opacity)) !important;
 }
-.bg-blue-light{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(194 235 237 / var(--tw-bg-opacity)) !important;
-}
 .bg-gray-light{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(234 234 234 / var(--tw-bg-opacity)) !important;
+}
+.bg-gray-medium{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity)) !important;
 }
 .bg-white{
   --tw-bg-opacity: 1 !important;
@@ -666,6 +665,10 @@ img {
 .text-white{
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+.text-blue-dark{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 80 152 / var(--tw-text-opacity)) !important;
 }
 .outline-none{
   outline: 2px solid transparent !important;
@@ -2188,7 +2191,7 @@ header {
   flex-direction: row;
 }
 header .logo {
-  max-width: 200px;
+  max-width: 180px;
 }
 header .right-header {
   max-width: 70%;
@@ -2310,21 +2313,18 @@ header .header-elements li a:hover:after {
   }
 }
 .promociones-block .wrapper > div {
-  min-width: 25%;
-  width: 25%;
+  min-width: 33.33%;
+  width: 33.33%;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-@media (max-width: 1200px) {
-  .promociones-block .wrapper > div {
-    min-width: 33.33%;
-    width: 33.33%;
-  }
 }
 @media (max-width: 768px) {
   .promociones-block .wrapper > div {
     min-width: 60%;
   }
+}
+.promociones-block .wrapper > div img {
+  width: 100%;
 }
 
 .cycle-slideshow .nav {
@@ -2343,8 +2343,6 @@ header .header-elements li a:hover:after {
   background-position: center;
   transform-origin: center;
   background-image: url(../img/chevron-white.svg);
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
   --tw-bg-opacity: 1;
   background-color: rgb(0 80 152 / var(--tw-bg-opacity));
 }
@@ -2355,10 +2353,6 @@ header .header-elements li a:hover:after {
 .cycle-slideshow .nav.nav-next {
   right: 15px;
   transform: rotate(-90deg);
-}
-.cycle-slideshow:hover .nav {
-  opacity: 1;
-  transition: opacity 0.4s ease-in;
 }
 
 .opinions .wrapper {
@@ -2394,18 +2388,25 @@ header .header-elements li a:hover:after {
   max-width: 800px;
 }
 
+#agencia-list {
+  max-height: 700px;
+}
+
+@media (max-width: 980px) {
+  #map,
+  #agencia-list {
+    max-height: 70vh;
+  }
+}
 .hover\:underline:hover{
   text-decoration-line: underline !important;
 }
-
 .hover\:opacity-50:hover{
   opacity: 0.5 !important;
 }
-
 .focus\:border-0:focus{
   border-width: 0px !important;
 }
-
 @media (min-width: 640px){
   .sm\:w-full{
     width: 100% !important;
@@ -2429,13 +2430,9 @@ header .header-elements li a:hover:after {
     line-height: 1 !important;
   }
 }
-
 @media (min-width: 768px){
   .md\:mb-0{
     margin-bottom: 0px !important;
-  }
-  .md\:mt-0{
-    margin-top: 0px !important;
   }
   .md\:block{
     display: block !important;
@@ -2465,6 +2462,9 @@ header .header-elements li a:hover:after {
   .md\:flex-row{
     flex-direction: row !important;
   }
+  .md\:flex-col-reverse{
+    flex-direction: column-reverse !important;
+  }
   .md\:gap-10{
     gap: 2.5rem !important;
   }
@@ -2489,7 +2489,6 @@ header .header-elements li a:hover:after {
     line-height: 1rem !important;
   }
 }
-
 @media (min-width: 1024px){
   .lg\:relative{
     position: relative !important;
@@ -2511,7 +2510,6 @@ header .header-elements li a:hover:after {
     padding-top: 2rem !important;
   }
 }
-
 @media (min-width: 1280px){
   .xl\:px-12{
     padding-left: 3rem !important;

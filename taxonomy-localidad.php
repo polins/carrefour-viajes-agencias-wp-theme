@@ -15,38 +15,56 @@
 get_header();
 
 $qobj = get_queried_object();
+$parent_1 = wp_get_term_taxonomy_parent_id($qobj->term_id,'localidad');
+$parent_2 = wp_get_term_taxonomy_parent_id($parent_1,'localidad');
 
 ?>
 
-	<div class="site-container container mx-auto">
-
-		<div class="mb-10">
-			<h1 class="font-medium text-xl mb-2">Agencias de viajes en <strong><?php echo $qobj->name; ?></strong></h1>
+	<div class="bg-gray-light py-1 -mt-5 mb-5 ">
+		<div class="container mx-auto text-xs">
+			<span><a href="<?php echo bloginfo('url'); ?>">Inicio</a></span> /
+			<?php if($parent_2) { ?>
+				<span><a href="/<?php echo get_term( $parent_2 )->slug; ?>"><?php echo get_term( $parent_2 )->name; ?></a></span> /
+			<?php } ?>
+			<?php if($parent_1) { ?>
+				<span><a href="/<?php echo get_term( $parent_1 )->slug; ?>"><?php echo get_term( $parent_1 )->name; ?></a></span> /
+			<?php } ?>
+			<span class="breadcrumb_last" aria-current="page"><?php echo $qobj->name; ?></span>
 		</div>
+	</div>
 
-		<div class="flex flex-col-reverse md:block md:columns-2 mb-20">
-			<div style="max-height: 700px;" class="overflow-y-scroll">
+	<div class="site-container">
 
-				<?php if ( have_posts() ) :
+		<div class="container mx-auto">
 
-				while ( have_posts() ) :
-				the_post(); 
-
-						get_template_part( 'template-parts/cards/agencias' );
-
-				endwhile; endif; ?>
-
+			<div class="mb-10">
+				<h1 class="font-medium text-xl mb-2">Agencias de viajes en <strong><?php echo $qobj->name; ?></strong></h1>
 			</div>
 
-			<div id="map" style="height:700px" class="mb-5 md:mb-0 rounded border border-gray-light"></div>
+			<div class="flex flex-col-reverse md:block md:columns-2 mb-20">
+				<div id="agencia-list" class="overflow-y-scroll">
+
+					<?php if ( have_posts() ) :
+
+					while ( have_posts() ) :
+					the_post(); 
+
+							get_template_part( 'template-parts/cards/agencias' );
+
+					endwhile; endif; ?>
+
+				</div>
+
+				<div id="map" style="height:700px" class="mb-5 md:mb-0 rounded border border-gray-light"></div>
+			</div>
+
+			<?php get_template_part( 'template-parts/content-promociones' ); ?>
+
+			<div class="mt-10 mb-14 max-w-5xl">
+				<?php echo term_description(); ?>
+			</div>
+
 		</div>
-
-		<?php get_template_part( 'template-parts/content-promociones' ); ?>
-
-		<div class="mt-10 mb-14 max-w-5xl">
-			<?php echo term_description(); ?>
-		</div>
-
 
 	</div>
 

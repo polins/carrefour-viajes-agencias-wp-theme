@@ -10,6 +10,17 @@
 get_header();
 ?>
 
+	<div class="bg-gray-light py-1 -mt-5 mb-5 ">
+		<div class="container mx-auto text-xs">
+			<span><a href="<?php echo bloginfo('url'); ?>">Inicio</a></span> /
+			<?php $terms = get_the_terms( get_the_ID(), 'localidad' ); ?>
+			<?php foreach ($terms as $term) { ?>
+				<span><a href="/<?php echo $term->slug; ?>"><?php echo $term->name; ?></a></span> / 
+			<?php } ?>
+			<span class="breadcrumb_last text-blue-dark" aria-current="page"><?php the_title(); ?></span>
+		</div>
+	</div>
+
 	<main id="primary" class="site-main site-container">
 
 
@@ -23,10 +34,9 @@ get_header();
 
 			<div class="container mx-auto">
 				<h1 class="text-2xl font-semibold mb-2"><?php the_title(); ?></h1>
-				<div class="mb-5 text-sm"><?php echo do_shortcode('[wpseo_breadcrumb]'); ?></div>
-				<div class="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-10 mb-5">
+				<div class="flex flex-col md:flex-col-reverse md:grid md:grid-cols-2 md:gap-10 mb-5">
 					
-					<div class="mt-5 md:mt-0">
+					<div class="mb-5 md:mb-0">
 						<?php $photos_query = get_post_meta( $post->ID, 'gallery_data', true ); if($photos_query) { ?>
 
 							<div class="cycle-slideshow"
@@ -64,7 +74,7 @@ get_header();
 									
 									<?php  while( have_rows('review') ) : the_row(); ?>
 
-										<a rel="nofollow" target="_blank" href="<?php  echo get_sub_field('enlace'); ?>" class="wrapper bg-blue-light p-2">
+										<a rel="nofollow" target="_blank" href="<?php  echo get_sub_field('enlace'); ?>" class="wrapper bg-gray-medium text-white p-2">
 
 											<div class="mb-2 flex">
 												<div class="star"></div>
@@ -82,7 +92,9 @@ get_header();
 												<?php } ?>
 											</div>
 
-											<div class="mb-2 text-sm font-semibold"><?php echo get_sub_field('nombre'); ?></div>
+											<?php if(get_sub_field('nombre')) { ?>
+												<div class="mb-2 text-sm font-semibold"><?php echo get_sub_field('nombre'); ?></div>
+											<?php } ?>
 
 											<div class="content-text mb-2 text-sm">
 												<?php if (strlen(get_sub_field('texto')) > 130) {echo substr(get_sub_field('texto'), 0, 130); echo "...";} else {echo get_sub_field('texto'); }  ?>
@@ -151,13 +163,13 @@ get_header();
 						</div>
 						<div class="text-lg border font-medium bg-gray-light border-gray-light px-4 py-1 mt-5">Horarios</div>
 						<div class="border border-gray-light p-4">
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 1 ) { ( str_contains(get_field('lunes'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Lunes: <?php the_field('lunes') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 2 ) { ( str_contains(get_field('martes'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Martes: <?php the_field('martes') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light text-<?php if(date('w') == 3 ) { ( str_contains(get_field('miercoles'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Miércoles: <?php the_field('miercoles') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 4 ) { ( str_contains(get_field('jueves'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Jueves: <?php the_field('jueves') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 5 ) { ( str_contains(get_field('viernes'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Viernes: <?php the_field('viernes') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 6 ) { ( str_contains(get_field('sabado'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");} ?>">Sábado: <?php the_field('sabado') ?></div>
-							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 7 ) { ( str_contains(get_field('domingo'), 'Cerrado')) ?  print("red font-bold") : print("green font-bold");}?>">Domingo: <?php the_field('domingo') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 1 ) { ( str_contains(get_field('lunes'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Lunes: <?php the_field('lunes') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 2 ) { ( str_contains(get_field('martes'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Martes: <?php the_field('martes') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light text-<?php if(date('w') == 3 ) { ( str_contains(get_field('miercoles'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Miércoles: <?php the_field('miercoles') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 4 ) { ( str_contains(get_field('jueves'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Jueves: <?php the_field('jueves') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 5 ) { ( str_contains(get_field('viernes'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Viernes: <?php the_field('viernes') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 6 ) { ( str_contains(get_field('sabado'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");} ?>">Sábado: <?php the_field('sabado') ?></div>
+							<div class="mb-2 pb-1 border-b border-gray-light <?php if(date('w') == 7 ) { ( str_contains(get_field('domingo'), 'Cerrado')) ?  print("text-red font-bold") : print("text-green font-bold");}?>">Domingo: <?php the_field('domingo') ?></div>
 						</div>
 						
 					</div>
