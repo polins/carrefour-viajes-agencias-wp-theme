@@ -157,6 +157,7 @@ function localidad_custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+		'show_in_rest'				 => true,
 		'rewrite'                    => $rewrite,
 	);
 	register_taxonomy( 'localidad', array( 'agencia' ), $args );
@@ -202,6 +203,7 @@ function zip_custom_taxonomy() {
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
+		'show_in_rest'          	=> true,
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
@@ -233,3 +235,64 @@ function na_parse_request( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'na_parse_request' );
+
+// rest api zip
+add_action( 'rest_api_init', 'register_zip_rest_route' );
+function register_zip_rest_route(){
+	register_rest_route(
+		'custom/v2',
+		'/zip',
+		array(
+			'methods' => 'GET',
+			'callback' => 'get_zip',
+		)
+	);
+}
+
+
+function get_zip() {
+$zip = array();
+$terms = get_terms( array(
+    'taxonomy'   => 'zip',
+    'hide_empty' => true,
+) );
+foreach ($terms as $term) {
+	$zip_data = array(
+		'name' => $term->name,
+		'slug' => $term->slug
+	);
+	$zip[] = $zip_data;
+}
+return rest_ensure_response( $zip );
+}
+
+// rest api localidad
+add_action( 'rest_api_init', 'register_localidad_rest_route' );
+function register_localidad_rest_route(){
+	register_rest_route(
+		'custom/v2',
+		'/localidad',
+		array(
+			'methods' => 'GET',
+			'callback' => 'get_localidad',
+		)
+	);
+}
+
+
+function get_localidad() {
+$localidad = array();
+$terms = get_terms( array(
+    'taxonomy'   => 'localidad',
+    'hide_empty' => true,
+) );
+foreach ($terms as $term) {
+	$localidad_data = array(
+		'name' => $term->name,
+		'slug' => $term->slug,
+		'tipo' =>  get_field('tipo', $term)
+	);
+	$localidad[] = $localidad_data;
+}
+return rest_ensure_response( $localidad );
+}
