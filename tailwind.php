@@ -1,1 +1,1 @@
-<div class="py-1 px-2 text-red text-green"></div>
+<div class="py-1 px-2 text-red text-green max-w-2xl"></div>

@@ -13,8 +13,10 @@ get_header();
 	<main id="primary" class="site-main site-container">
 
 		<section class="error-404 not-found">
-			<h1 class="font-medium text-center text-xl mb-2">Parece que no encontramos la página que estás buscando...</h1>
-			<img src="/wp-content/uploads/2024/05/error-background.jpg" alt="Página 404" class="mx-auto mb-5">
+			<h1 class="font-medium text-center text-xl mb-5">Parece que no encontramos la página que estás buscando...</h1>
+
+			<?php get_template_part( 'template-parts/buscador'); ?>
+
 			<div class="mb-10 text-center flex flex-col">
 				<div class="mb-2">
 					<a href="javascript:void(0);" onclick="history.back()">Volver a la página anterior</a>
@@ -27,6 +29,7 @@ get_header();
 				</div>
 			</div>
 		</section><!-- .error-404 -->
+
 
 	</main><!-- #main -->
 

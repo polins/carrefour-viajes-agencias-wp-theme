@@ -296,3 +296,50 @@ foreach ($terms as $term) {
 }
 return rest_ensure_response( $localidad );
 }
+
+// rest api localidad + zip
+add_action( 'rest_api_init', 'register_localidad_zip_rest_route' );
+function register_localidad_zip_rest_route(){
+	register_rest_route(
+		'custom/v2',
+		'/place',
+		array(
+			'methods' => 'GET',
+			'callback' => 'get_place',
+		)
+	);
+}
+
+
+function get_place() {
+$result = array();
+$localidad = array();
+$terms = get_terms( array(
+    'taxonomy'   => 'localidad',
+    'hide_empty' => true,
+) );
+foreach ($terms as $term) {
+	$localidad_data = array(
+		'id' => $term->slug,
+		'text' => $term->name,
+	);
+	$localidad[] = $localidad_data;
+}
+$terms = get_terms( array(
+    'taxonomy'   => 'zip',
+    'hide_empty' => true,
+) );
+foreach ($terms as $term) {
+	$localidad_data = array(
+		'id' => $term->slug,
+		'text' => $term->name,
+	);
+	$localidad[] = $localidad_data;
+}
+$result_data = array(
+	'results' => $localidad
+);
+$result = $result_data;
+return rest_ensure_response( $result );
+}
+

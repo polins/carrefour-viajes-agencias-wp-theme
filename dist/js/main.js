@@ -94,10 +94,23 @@
             });
 
         }
+
+        var Buscador = function(){
+            $('#search-agencias').select2({
+                placeholder: 'Escribe la localidad o el código postal',
+                minimumInputLength:3,
+                language: "es",
+                ajax: {
+                    dataType : "json",
+                    url      : "/wp-json/custom/v2/place/",
+                },
+            });
+        }
         
         return {
             init: function() {
               GoogleMaps();
+              Buscador();
             }
         }
     }();
