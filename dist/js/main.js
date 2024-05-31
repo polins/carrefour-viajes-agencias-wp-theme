@@ -96,15 +96,39 @@
         }
 
         var Buscador = function(){
-            $('#search-agencias').select2({
-                placeholder: 'Escribe la localidad o el código postal',
-                minimumInputLength:3,
-                language: "es",
-                ajax: {
-                    dataType : "json",
-                    url      : "/wp-json/custom/v2/place/",
-                },
+
+            function containsNumber(str) {
+              // Check if the string contains any digit between 0 and 9
+              return /\d/.test(str);
+            }
+
+            fetch('/wp-json/custom/v2/place/')
+            .then((response) => response.json())
+            .then((json) => {
+                $('#search-agencias').select2({
+                        placeholder: 'Escribe la localidad o el código postal',
+                        minimumInputLength:2,
+                        language: "es",
+                        data: json.results
+                    });
+                $('#search-agencias').on('select2:select', function (e) {
+                  var data = e.params.data;
+                  var action = data.id;
+                  $('form.buscador').attr('action', "/"+action);
+                  $('form.buscador').removeClass('error');
+              });
+
+              $( "form.buscador" ).on( "submit", function( event ) {
+                if($(this).attr('action') == ''){
+                    $(this).addClass('error');
+                    event.preventDefault();
+                }
+              });
+
+
             });
+
+            
         }
         
         return {

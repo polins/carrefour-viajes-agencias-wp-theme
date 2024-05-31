@@ -14,6 +14,7 @@ gulp.task('sass', function () {
     .pipe(purgecss({
         content: [
             'template-parts/*.php',
+            'template-parts/buscador.php',
             'template-parts/*/*.php',
             'template-parts/*/*/*.php',
             'inc/*.php',

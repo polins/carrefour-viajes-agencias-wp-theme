@@ -15,7 +15,9 @@ get_header();
 		<section class="error-404 not-found">
 			<h1 class="font-medium text-center text-xl mb-5">Parece que no encontramos la página que estás buscando...</h1>
 
-			<?php get_template_part( 'template-parts/buscador'); ?>
+			<div class="mx-auto m-auto max-w-2xl">
+				<?php get_template_part( 'template-parts/buscador'); ?>
+			</div>
 
 			<div class="mb-10 text-center flex flex-col">
 				<div class="mb-2">

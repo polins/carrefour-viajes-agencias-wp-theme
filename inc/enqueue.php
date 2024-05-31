@@ -11,6 +11,7 @@ function carrefour_enqueue() {
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVJgl6Z6o6yffjc4b-nDfTSOSSFcvGYNE', array(), _S_VERSION, true );
 	wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/dist/js/select2.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'select2-es-js', get_template_directory_uri() . '/dist/js/select2-es.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'carrefour-main', get_template_directory_uri() . '/dist/js/main.js', array(), _S_VERSION, true );
 
 	if(is_singular('agencia')){

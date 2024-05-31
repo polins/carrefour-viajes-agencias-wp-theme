@@ -1809,14 +1809,13 @@ header{
 }
 .select2-dropdown {
     background-color: white;
-    border: 1px solid #aaa;
-    border-radius: 4px;
     box-sizing: border-box;
     display: block;
     position: absolute;
     left: -100000px;
     width: 100%;
     z-index: 1051;
+    @apply border border-gray-light rounded
 }
 .select2-results {
     display: block;
@@ -1836,6 +1835,7 @@ header{
 }
 .select2-container--open .select2-dropdown {
     left: 0;
+    top:30px;
 }
 .select2-container--open .select2-dropdown--above {
     border-bottom: none;
@@ -1855,6 +1855,7 @@ header{
     padding: 4px;
     width: 100%;
     box-sizing: border-box;
+    outline: none;
 }
 .select2-search--dropdown .select2-search__field::-webkit-search-cancel-button {
     -webkit-appearance: none;
@@ -2313,6 +2314,43 @@ header{
     .select2-container{
         width:100% !important;
     }
+}
+form.buscador{
+    max-height: 48px;
+    &.error{
+        @apply border-red
+    }
+    button{
+        min-height: 46px;
+    }
+    select{
+        opacity: 0 !important;
+    }
+    input{outline: none !important;}
+    .select2-container--default .select2-selection--single{
+        .select2-selection__rendered{
+            padding-left: 0;
+        }
+        .select2-selection__arrow{
+            b{
+                display: inline-block;
+                border: none;
+                background-size: cover;
+                width: 10px;
+                height: 10px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                margin-right: 9px;
+                background-image: url("data:image/svg+xml,%3Csvg fill='%23333' height='20px' width='20px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 407.437 407.437' xml:space='preserve'%3E%3Cpolygon points='386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 '/%3E%3C/svg%3E");
+            }
+            right:6px;
+            @apply h-full
+        }
+        @apply w-full px-2 py-2 outline-none mb-5 md:mb-0 h-full border-none
+    }
+    @apply max-w-sm flex mr-5 w-full border border-gray-light flex rounded-tl rounded-bl
 }
 
 /* purgecss end ignore */
