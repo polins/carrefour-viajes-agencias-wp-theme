@@ -20,7 +20,7 @@ $parent_2 = wp_get_term_taxonomy_parent_id($parent_1,'localidad');
 
 ?>
 
-	<div class="bg-gray-light py-1 -mt-5 mb-5 ">
+	<div class="bg-gray-light site-container py-1 -mt-5 mb-5 ">
 		<div class="container mx-auto text-xs">
 			<span><a href="<?php echo bloginfo('url'); ?>">Inicio</a></span> /
 			<?php if($parent_2) { ?>

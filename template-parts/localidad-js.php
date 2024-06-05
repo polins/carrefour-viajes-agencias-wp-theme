@@ -23,7 +23,7 @@
 		 while ($wp_query->have_posts()) : $wp_query->the_post(); 
 
 		 	$direccion = get_field('direccion');
-			echo "['<div class=\"mb-2\"><a href=\"".get_the_permalink()."\">".get_the_title()."</a></div><div class=\"text-center\"><a href=\"".get_the_permalink()."\" class=\"border-2 border-blue-dark inline-block bg-blue-dark text-white font-medium py-1 px-2\">Ver agencias</a></div>', ".$direccion['lat'].",".$direccion['lng']."],";
+			echo "['<div class=\"mb-2\"><a href=\"".get_the_permalink()."\">".get_the_title()."</a></div><div class=\"text-center\"><a href=\"".get_the_permalink()."\" class=\"border-2 border-blue-dark inline-block bg-blue-dark text-white font-medium py-1 px-2\">Ver agencia</a></div>', ".$direccion['lat'].",".$direccion['lng']."],";
 
 	?>
 

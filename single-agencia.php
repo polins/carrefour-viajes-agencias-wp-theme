@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div class="bg-gray-light py-1 -mt-5 mb-5 ">
+	<div class="bg-gray-light site-container py-1 -mt-5 mb-5 ">
 		<div class="container mx-auto text-xs">
 			<span><a href="<?php echo bloginfo('url'); ?>">Inicio</a></span> /
 			<?php $terms = get_the_terms( get_the_ID(), 'localidad' ); ?>
@@ -41,7 +41,7 @@ get_header();
 
 							<div class="cycle-slideshow"
 						    data-cycle-fx=fadeout
-						    data-cycle-timeout=8000
+						    data-cycle-timeout=0
 						    data-cycle-prev=#prev
 						    data-cycle-next=#next
 							data-cycle-auto-height=container>

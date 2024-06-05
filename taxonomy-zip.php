@@ -18,7 +18,7 @@ $qobj = get_queried_object();
 
 ?>
 
-	<div class="bg-gray-light py-1 -mt-5 mb-5 ">
+	<div class="bg-gray-light breadcrumbs-wrapper py-1 -mt-5 mb-5 ">
 		<div class="container mx-auto text-xs">
 			<span><a href="<?php echo bloginfo('url'); ?>">Inicio</a></span> / 
 			<span class="breadcrumb_last" aria-current="page">Código postal: <?php echo $qobj->name; ?></span>

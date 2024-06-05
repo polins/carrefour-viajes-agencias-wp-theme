@@ -19,7 +19,7 @@ get_header();
 
 		<div class="container mx-auto"> 
 
-			<h1 class="font-medium text-2xl mb-2">Busca tu agencia de viajes Viajes Carrefour</h1>
+			<h1 class="font-medium text-2xl mb-2">Busca tu agencia de Viajes Carrefour</h1>
 			<h2 class="mb-5">Encuentra tu agencia Viajes Carrefour más cercana</h2>
 
 			<?php get_template_part( 'template-parts/buscador'); ?>
