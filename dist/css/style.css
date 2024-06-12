@@ -2334,7 +2334,7 @@ header .header-elements li a:hover:after {
 }
 @media (max-width: 768px) {
   .promociones-block .wrapper > div {
-    min-width: 60%;
+    min-width: 80%;
   }
 }
 .promociones-block .wrapper > div img {
