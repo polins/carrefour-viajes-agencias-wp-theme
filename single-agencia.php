@@ -62,7 +62,13 @@ get_header();
 							</div>
 
 
-						<?php } else { the_post_thumbnail('full'); } ?>
+						<?php } else { 
+							if(has_post_thumbnail(get_the_ID())){
+							the_post_thumbnail('full'); 
+							} else{
+								echo "<img src='/wp-content/themes/carrefour-viajes-agencias/dist/img/agencia-logo-viajes-carrefour.jpg' alt='".get_the_title()."'>";
+							} 
+						} ?>
 
 						<div class="mt-5">
 							<?php the_content(); ?>
